@@ -5,11 +5,11 @@
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   2.6.0
+ * @version   2.6.1
  */
 if (typeof Ember === 'undefined') { Em = Ember = {}; }
 Em.__global = this
-Em._eager = ["require","ember-metal/debug","ember-metal/core","ember-metal/assign","ember-metal/features","ember-metal/merge","ember-metal/instrumentation","ember-metal/utils","ember-metal/meta_listeners","ember-metal/empty_object","ember-metal/meta","ember-metal/error","ember-metal/cache","ember-metal/logger","ember-metal/path_cache","ember-metal/property_get","ember-metal/events","ember-metal/observer_set","ember-metal/symbol","ember-metal/property_events","ember-metal/properties","ember-metal/tags","ember-metal/property_set","ember-metal/map","ember-metal/get_properties","ember-metal/set_properties","ember-metal/watch_key","ember-metal/chains","ember-metal/watch_path","ember-metal/watching","ember-metal/expand_properties","ember-metal/dependent_keys","ember-metal/computed","ember-metal/alias","ember-metal/is_none","ember-metal/is_empty","ember-metal/computed_macros","ember-metal/observer","backburner/utils","backburner/platform","backburner/binary-search","backburner/queue","backburner/deferred-action-queues","backburner","ember-metal/run_loop","ember-metal/binding","ember-metal/streams/subscriber","ember-metal/streams/dependency","ember-metal/streams/stream","ember-metal/streams/utils","ember-metal/mixin","ember-metal/libraries","ember-metal/is_blank","ember-metal/is_present","ember-metal/environment","ember-debug/handlers","ember-debug/deprecate","ember-debug/warn","ember-debug/index","ember-metal/index","ember-runtime/is-equal","ember-runtime/mixins/enumerable","ember-runtime/system/each_proxy","ember-runtime/mixins/array","ember-runtime/mixins/action_handler","container/owner","ember-metal/injected_property","ember-runtime/inject","ember-runtime/system/core_object","ember-runtime/mixins/observable","ember-runtime/system/object","ember-runtime/utils","ember-runtime/mixins/comparable","ember-runtime/compare","ember-runtime/mixins/freezable","ember-runtime/mixins/copyable","ember-runtime/copy","ember-runtime/system/namespace","ember-metal/dictionary","ember-runtime/mixins/container_proxy","container/container","container/registry","ember-runtime/system/container","ember-runtime/mixins/mutable_enumerable","ember-runtime/mixins/mutable_array","ember-runtime/system/array_proxy","ember-runtime/mixins/-proxy","ember-runtime/system/object_proxy","ember-metal/replace","ember-runtime/system/native_array","ember-runtime/string_registry","ember-runtime/system/string","ember-runtime/system/lazy_load","ember-runtime/mixins/target_action_support","ember-runtime/mixins/evented","ember-runtime/mixins/promise_proxy","ember-metal/weak_map","ember-runtime/computed/reduce_computed_macros","ember-runtime/mixins/controller_content_model_alias_deprecation","ember-runtime/mixins/controller","ember-runtime/controllers/controller","ember-runtime/system/service","rsvp/events","rsvp/config","rsvp/utils","rsvp/instrument","rsvp/-internal","rsvp/enumerator","rsvp/promise/all","rsvp/promise/race","rsvp/promise/resolve","rsvp/promise/reject","rsvp/promise","rsvp/node","rsvp/all","rsvp/all-settled","rsvp/race","rsvp/promise-hash","rsvp/hash","rsvp/hash-settled","rsvp/rethrow","rsvp/defer","rsvp/map","rsvp/resolve","rsvp/reject","rsvp/filter","rsvp/asap","rsvp","ember-runtime/ext/rsvp","ember-runtime/ext/string","ember-runtime/ext/function","ember-runtime/mixins/registry_proxy","ember-runtime/index","ember-views/system/jquery","ember-views/system/utils","ember-views/system/ext","htmlbars-util/morph-utils","htmlbars-runtime/expression-visitor","htmlbars-runtime/node-visitor","morph-range/utils","morph-range","htmlbars-runtime/morph","htmlbars-util/template-utils","htmlbars-util/array-utils","htmlbars-util/void-tag-names","htmlbars-runtime/render","morph-range/morph-list","htmlbars-util/object-utils","htmlbars-runtime/hooks","htmlbars-runtime","ember-views/compat/attrs-proxy","ember-htmlbars/hooks/get-value","ember-views/system/build-component-template","ember-metal-views/htmlbars-renderer","ember-metal-views/index","ember-views/views/states/default","ember-views/views/states/pre_render","ember-views/views/states/has_element","ember-views/views/states/in_dom","ember-views/views/states/destroying","ember-views/views/states","ember-views/views/core_view","ember-views/mixins/legacy_view_support","ember-views/mixins/view_context_support","ember-views/mixins/view_child_views_support","ember-views/mixins/legacy_child_views_support","ember-views/mixins/view_state_support","ember-views/mixins/template_rendering_support","ember-views/mixins/class_names_support","ember-views/mixins/instrumentation_support","ember-views/mixins/aria_role_support","ember-views/mixins/visibility_support","ember-views/mixins/view_support","ember-views/views/view","ember-views/components/component","ember-views/system/action_manager","ember-views/system/event_dispatcher","ember-views/mixins/view_target_action_support","ember-htmlbars/system/lookup-helper","ember-views/component_lookup","ember-views/views/checkbox","ember-views/mixins/text_support","ember-views/views/text_field","ember-views/views/text_area","ember-views/index","ember-routing/ext/run_loop","ember-routing/ext/controller","ember-routing/location/util","ember-routing/location/api","ember-routing/location/none_location","ember-routing/location/hash_location","ember-routing/location/history_location","ember-routing/location/auto_location","ember-routing/system/generate_controller","ember-routing/system/controller_for","ember-routing/system/dsl","ember-routing/utils","ember-routing/system/router_state","route-recognizer/normalizer","route-recognizer/polyfills","route-recognizer/recognize-results","route-recognizer/segment-trie-node","route-recognizer","router/utils","router/handler-info","router/transition-state","router/transition","router/transition-intent","router/handler-info/resolved-handler-info","router/handler-info/unresolved-handler-info-by-object","router/handler-info/unresolved-handler-info-by-param","router/handler-info/factory","router/transition-intent/named-transition-intent","router/unrecognized-url-error","router/transition-intent/url-transition-intent","router/router","router","ember-routing/system/router","ember-routing/system/route","ember-routing/index","ember-htmlbars/helpers","ember-application/utils/validate-type","ember-htmlbars/template_registry","ember-application/system/resolver","morph-attr/sanitize-attribute-value","dom-helper/prop","dom-helper/build-html-dom","htmlbars-util/handlebars/safe-string","htmlbars-util/safe-string","htmlbars-util/handlebars/utils","htmlbars-util/namespaces","htmlbars-util","morph-attr","dom-helper/classes","dom-helper","ember-htmlbars/morphs/morph","ember-htmlbars/morphs/attr-morph","ember-htmlbars/system/dom-helper","ember-template-compiler/system/template","ember-htmlbars/templates/top-level-view","ember-routing-views/views/outlet","ember-routing/system/cache","ember-application/system/engine-instance","ember-application/system/application-instance","ember-metal/streams/proxy-stream","ember-htmlbars/streams/utils","ember-htmlbars/streams/helper-instance","ember-htmlbars/streams/helper-factory","ember-htmlbars/streams/built-in-helper","ember-htmlbars/system/invoke-helper","ember-htmlbars/utils/subscribe","ember-htmlbars/utils/extract-positional-params","ember-htmlbars/utils/lookup-component","ember-htmlbars/keywords/closure-component","ember-htmlbars/hooks/link-render-node","ember-htmlbars/hooks/subexpr","ember-routing-htmlbars/keywords/closure-action","ember-htmlbars/keywords/mut","ember-htmlbars/hooks/get-cell-or-value","ember-htmlbars/system/instrumentation-support","ember-htmlbars/glimmer-component","ember-htmlbars/node-managers/component-node-manager","ember-htmlbars/templates/link-to","ember-routing-views/components/link-to","ember-routing/services/routing","ember-extension-support/container_debug_adapter","vertex","visit","dag-map","ember-application/system/engine","ember-application/system/application","ember-application/index","ember-extension-support/data_adapter","ember-extension-support/index","ember-template-compiler/plugins","ember-template-compiler/system/compile_options","ember-template-compiler/system/precompile","ember-template-compiler/system/compile","ember-template-compiler/system/calculate-location-display","ember-template-compiler/plugins/transform-old-binding-syntax","ember-template-compiler/plugins/transform-old-class-binding-syntax","ember-template-compiler/plugins/transform-item-class","ember-template-compiler/plugins/transform-closure-component-attrs-into-mut","ember-template-compiler/plugins/transform-component-attrs-into-mut","ember-template-compiler/plugins/transform-component-curly-to-readonly","ember-template-compiler/plugins/transform-angle-bracket-components","ember-template-compiler/plugins/transform-input-on-to-onEvent","ember-template-compiler/plugins/transform-top-level-components","ember-template-compiler/plugins/deprecate-render-model","ember-template-compiler/plugins/prevent-render-block","ember-template-compiler/plugins/transform-inline-link-to","ember-template-compiler/plugins/assert-no-view-and-controller-paths","ember-template-compiler/plugins/assert-no-view-helper","ember-template-compiler/plugins/assert-no-each-in","ember-template-compiler/compat/precompile","ember-template-compiler/compat","ember-template-compiler/index","ember-htmlbars/helper","ember-htmlbars/system/make_bound_helper","ember-views/streams/should_display","ember-htmlbars/helpers/if_unless","ember-htmlbars/helpers/with","ember-htmlbars/helpers/loc","ember-htmlbars/helpers/log","ember-htmlbars/utils/decode-each-key","ember-htmlbars/helpers/each","ember-htmlbars/helpers/each-in","ember-htmlbars/helpers/-normalize-class","ember-htmlbars/helpers/concat","ember-htmlbars/helpers/-join-classes","ember-htmlbars/helpers/-html-safe","ember-htmlbars/helpers/hash","ember-htmlbars/system/bootstrap","ember-htmlbars/utils/string","ember-htmlbars/compat","ember-htmlbars/index","ember-htmlbars/keywords","ember-routing/system/query_params","ember-routing-htmlbars/helpers/query-params","ember-routing-htmlbars/keywords/action","ember-views/streams/utils","ember-routing-htmlbars/keywords/element-action","ember-htmlbars/node-managers/view-node-manager","ember-routing-htmlbars/keywords/render","ember-routing-htmlbars/index","ember-routing-views/index","ember/index","ember-htmlbars/hooks/concat","ember-htmlbars/hooks/create-fresh-scope","ember-htmlbars/hooks/bind-shadow-scope","ember-htmlbars/hooks/bind-self","ember-htmlbars/hooks/bind-scope","ember-htmlbars/hooks/bind-local","ember-htmlbars/hooks/bind-block","ember-htmlbars/hooks/update-self","ember-htmlbars/hooks/get-root","ember-htmlbars/hooks/get-child","ember-htmlbars/hooks/get-block","ember-htmlbars/hooks/cleanup-render-node","ember-htmlbars/hooks/destroy-render-node","ember-htmlbars/hooks/did-render-node","ember-htmlbars/hooks/will-cleanup-tree","ember-htmlbars/hooks/did-cleanup-tree","ember-htmlbars/utils/is-component","ember-htmlbars/hooks/classify","ember-htmlbars/hooks/component","ember-htmlbars/hooks/lookup-helper","ember-htmlbars/hooks/has-helper","ember-htmlbars/hooks/invoke-helper","ember-htmlbars/hooks/element","ember-htmlbars/keywords/debugger","ember-htmlbars/keywords/with","ember-htmlbars/keywords/outlet","ember-htmlbars/keywords/unbound","ember-htmlbars/keywords/view","ember-htmlbars/keywords/component","ember-htmlbars/keywords/element-component","ember-views/system/lookup_partial","ember-htmlbars/keywords/partial","ember-htmlbars/keywords/input","ember-htmlbars/keywords/textarea","ember-htmlbars/keywords/yield","ember-htmlbars/keywords/readonly","ember-htmlbars/keywords/get","ember-htmlbars/env","ember-htmlbars/system/render-env","ember-htmlbars/system/render-view","ember-metal/streams/key-stream"];
+Em._eager = ["require","ember-metal/debug","ember-metal/core","ember-metal/assign","ember-metal/features","ember-metal/merge","ember-metal/instrumentation","ember-metal/utils","ember-metal/meta_listeners","ember-metal/empty_object","ember-metal/meta","ember-metal/error","ember-metal/cache","ember-metal/logger","ember-metal/path_cache","ember-metal/property_get","ember-metal/events","ember-metal/observer_set","ember-metal/symbol","ember-metal/property_events","ember-metal/properties","ember-metal/tags","ember-metal/property_set","ember-metal/map","ember-metal/get_properties","ember-metal/set_properties","ember-metal/watch_key","ember-metal/chains","ember-metal/watch_path","ember-metal/watching","ember-metal/expand_properties","ember-metal/dependent_keys","ember-metal/computed","ember-metal/alias","ember-metal/is_none","ember-metal/is_empty","ember-metal/computed_macros","ember-metal/observer","backburner/utils","backburner/platform","backburner/binary-search","backburner/queue","backburner/deferred-action-queues","backburner","ember-metal/run_loop","ember-metal/binding","ember-metal/streams/subscriber","ember-metal/streams/dependency","ember-metal/streams/stream","ember-metal/streams/utils","ember-metal/mixin","ember-metal/libraries","ember-metal/is_blank","ember-metal/is_present","ember-metal/environment","ember-debug/handlers","ember-debug/deprecate","ember-debug/warn","ember-debug/index","ember-metal/index","ember-runtime/is-equal","ember-runtime/mixins/enumerable","ember-runtime/system/each_proxy","ember-runtime/mixins/array","ember-runtime/mixins/action_handler","container/owner","ember-metal/injected_property","ember-runtime/inject","ember-runtime/system/core_object","ember-runtime/mixins/observable","ember-runtime/system/object","ember-runtime/utils","ember-runtime/mixins/comparable","ember-runtime/compare","ember-runtime/mixins/freezable","ember-runtime/mixins/copyable","ember-runtime/copy","ember-runtime/system/namespace","ember-metal/dictionary","ember-runtime/mixins/container_proxy","container/container","container/registry","ember-runtime/system/container","ember-runtime/mixins/mutable_enumerable","ember-runtime/mixins/mutable_array","ember-runtime/system/array_proxy","ember-runtime/mixins/-proxy","ember-runtime/system/object_proxy","ember-metal/replace","ember-runtime/system/native_array","ember-runtime/string_registry","ember-runtime/system/string","ember-runtime/system/lazy_load","ember-runtime/mixins/target_action_support","ember-runtime/mixins/evented","ember-runtime/mixins/promise_proxy","ember-metal/weak_map","ember-runtime/computed/reduce_computed_macros","ember-runtime/mixins/controller_content_model_alias_deprecation","ember-runtime/mixins/controller","ember-runtime/controllers/controller","ember-runtime/system/service","rsvp/events","rsvp/config","rsvp/utils","rsvp/instrument","rsvp/-internal","rsvp/enumerator","rsvp/promise/all","rsvp/promise/race","rsvp/promise/resolve","rsvp/promise/reject","rsvp/promise","rsvp/node","rsvp/all","rsvp/all-settled","rsvp/race","rsvp/promise-hash","rsvp/hash","rsvp/hash-settled","rsvp/rethrow","rsvp/defer","rsvp/map","rsvp/resolve","rsvp/reject","rsvp/filter","rsvp/asap","rsvp","ember-runtime/ext/rsvp","ember-runtime/ext/string","ember-runtime/ext/function","ember-runtime/mixins/registry_proxy","ember-runtime/index","ember-views/system/jquery","ember-views/system/utils","ember-views/system/ext","htmlbars-util/morph-utils","htmlbars-runtime/expression-visitor","htmlbars-runtime/node-visitor","morph-range/utils","morph-range","htmlbars-runtime/morph","htmlbars-util/template-utils","htmlbars-util/array-utils","htmlbars-util/void-tag-names","htmlbars-runtime/render","morph-range/morph-list","htmlbars-util/object-utils","htmlbars-runtime/hooks","htmlbars-runtime","ember-views/compat/attrs-proxy","ember-htmlbars/hooks/get-value","ember-views/system/build-component-template","ember-metal-views/htmlbars-renderer","ember-metal-views/index","ember-views/views/states/default","ember-views/views/states/pre_render","ember-views/views/states/has_element","ember-views/views/states/in_dom","ember-views/views/states/destroying","ember-views/views/states","ember-views/views/core_view","ember-views/mixins/legacy_view_support","ember-views/mixins/view_context_support","ember-views/mixins/view_child_views_support","ember-views/mixins/legacy_child_views_support","ember-views/mixins/view_state_support","ember-views/mixins/template_rendering_support","ember-views/mixins/class_names_support","ember-views/mixins/instrumentation_support","ember-views/mixins/aria_role_support","ember-views/mixins/visibility_support","ember-views/mixins/view_support","ember-views/views/view","ember-views/components/component","ember-views/system/action_manager","ember-views/system/event_dispatcher","ember-views/mixins/view_target_action_support","ember-htmlbars/system/lookup-helper","ember-views/component_lookup","ember-views/views/checkbox","ember-views/mixins/text_support","ember-views/views/text_field","ember-views/views/text_area","ember-views/index","ember-routing/ext/run_loop","ember-routing/ext/controller","ember-routing/location/util","ember-routing/location/api","ember-routing/location/none_location","ember-routing/location/hash_location","ember-routing/location/history_location","ember-routing/location/auto_location","ember-routing/system/generate_controller","ember-routing/system/controller_for","ember-routing/system/dsl","ember-routing/utils","ember-routing/system/router_state","route-recognizer/dsl","route-recognizer","router/utils","router/handler-info","router/transition-state","router/transition","router/transition-intent","router/handler-info/resolved-handler-info","router/handler-info/unresolved-handler-info-by-object","router/handler-info/unresolved-handler-info-by-param","router/handler-info/factory","router/transition-intent/named-transition-intent","router/unrecognized-url-error","router/transition-intent/url-transition-intent","router/router","router","ember-routing/system/router","ember-routing/system/route","ember-routing/index","ember-htmlbars/helpers","ember-application/utils/validate-type","ember-htmlbars/template_registry","ember-application/system/resolver","morph-attr/sanitize-attribute-value","dom-helper/prop","dom-helper/build-html-dom","htmlbars-util/handlebars/safe-string","htmlbars-util/safe-string","htmlbars-util/handlebars/utils","htmlbars-util/namespaces","htmlbars-util","morph-attr","dom-helper/classes","dom-helper","ember-htmlbars/morphs/morph","ember-htmlbars/morphs/attr-morph","ember-htmlbars/system/dom-helper","ember-template-compiler/system/template","ember-htmlbars/templates/top-level-view","ember-routing-views/views/outlet","ember-routing/system/cache","ember-application/system/engine-instance","ember-application/system/application-instance","ember-metal/streams/proxy-stream","ember-htmlbars/streams/utils","ember-htmlbars/streams/helper-instance","ember-htmlbars/streams/helper-factory","ember-htmlbars/streams/built-in-helper","ember-htmlbars/system/invoke-helper","ember-htmlbars/utils/subscribe","ember-htmlbars/utils/extract-positional-params","ember-htmlbars/utils/lookup-component","ember-htmlbars/keywords/closure-component","ember-htmlbars/hooks/link-render-node","ember-htmlbars/hooks/subexpr","ember-routing-htmlbars/keywords/closure-action","ember-htmlbars/keywords/mut","ember-htmlbars/hooks/get-cell-or-value","ember-htmlbars/system/instrumentation-support","ember-htmlbars/glimmer-component","ember-htmlbars/node-managers/component-node-manager","ember-htmlbars/templates/link-to","ember-routing-views/components/link-to","ember-routing/services/routing","ember-extension-support/container_debug_adapter","vertex","visit","dag-map","ember-application/system/engine","ember-application/system/application","ember-application/index","ember-extension-support/data_adapter","ember-extension-support/index","ember-template-compiler/plugins","ember-template-compiler/system/compile_options","ember-template-compiler/system/precompile","ember-template-compiler/system/compile","ember-template-compiler/system/calculate-location-display","ember-template-compiler/plugins/transform-old-binding-syntax","ember-template-compiler/plugins/transform-old-class-binding-syntax","ember-template-compiler/plugins/transform-item-class","ember-template-compiler/plugins/transform-closure-component-attrs-into-mut","ember-template-compiler/plugins/transform-component-attrs-into-mut","ember-template-compiler/plugins/transform-component-curly-to-readonly","ember-template-compiler/plugins/transform-angle-bracket-components","ember-template-compiler/plugins/transform-input-on-to-onEvent","ember-template-compiler/plugins/transform-top-level-components","ember-template-compiler/plugins/deprecate-render-model","ember-template-compiler/plugins/prevent-render-block","ember-template-compiler/plugins/transform-inline-link-to","ember-template-compiler/plugins/assert-no-view-and-controller-paths","ember-template-compiler/plugins/assert-no-view-helper","ember-template-compiler/plugins/assert-no-each-in","ember-template-compiler/compat/precompile","ember-template-compiler/compat","ember-template-compiler/index","ember-htmlbars/helper","ember-htmlbars/system/make_bound_helper","ember-views/streams/should_display","ember-htmlbars/helpers/if_unless","ember-htmlbars/helpers/with","ember-htmlbars/helpers/loc","ember-htmlbars/helpers/log","ember-htmlbars/utils/decode-each-key","ember-htmlbars/helpers/each","ember-htmlbars/helpers/each-in","ember-htmlbars/helpers/-normalize-class","ember-htmlbars/helpers/concat","ember-htmlbars/helpers/-join-classes","ember-htmlbars/helpers/-html-safe","ember-htmlbars/helpers/hash","ember-htmlbars/system/bootstrap","ember-htmlbars/utils/string","ember-htmlbars/compat","ember-htmlbars/index","ember-htmlbars/keywords","ember-routing/system/query_params","ember-routing-htmlbars/helpers/query-params","ember-routing-htmlbars/keywords/action","ember-views/streams/utils","ember-routing-htmlbars/keywords/element-action","ember-htmlbars/node-managers/view-node-manager","ember-routing-htmlbars/keywords/render","ember-routing-htmlbars/index","ember-routing-views/index","ember/index","ember-htmlbars/hooks/concat","ember-htmlbars/hooks/create-fresh-scope","ember-htmlbars/hooks/bind-shadow-scope","ember-htmlbars/hooks/bind-self","ember-htmlbars/hooks/bind-scope","ember-htmlbars/hooks/bind-local","ember-htmlbars/hooks/bind-block","ember-htmlbars/hooks/update-self","ember-htmlbars/hooks/get-root","ember-htmlbars/hooks/get-child","ember-htmlbars/hooks/get-block","ember-htmlbars/hooks/cleanup-render-node","ember-htmlbars/hooks/destroy-render-node","ember-htmlbars/hooks/did-render-node","ember-htmlbars/hooks/will-cleanup-tree","ember-htmlbars/hooks/did-cleanup-tree","ember-htmlbars/utils/is-component","ember-htmlbars/hooks/classify","ember-htmlbars/hooks/component","ember-htmlbars/hooks/lookup-helper","ember-htmlbars/hooks/has-helper","ember-htmlbars/hooks/invoke-helper","ember-htmlbars/hooks/element","ember-htmlbars/keywords/debugger","ember-htmlbars/keywords/with","ember-htmlbars/keywords/outlet","ember-htmlbars/keywords/unbound","ember-htmlbars/keywords/view","ember-htmlbars/keywords/component","ember-htmlbars/keywords/element-component","ember-views/system/lookup_partial","ember-htmlbars/keywords/partial","ember-htmlbars/keywords/input","ember-htmlbars/keywords/textarea","ember-htmlbars/keywords/yield","ember-htmlbars/keywords/readonly","ember-htmlbars/keywords/get","ember-htmlbars/env","ember-htmlbars/system/render-env","ember-htmlbars/system/render-view","ember-metal/streams/key-stream"];
 (function() {
   'use strict';
   var seen = {};
@@ -1867,7 +1867,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   
     @class Ember
     @static
-    @version 2.6.0
+    @version 2.6.1
     @public
   */
 
@@ -1909,11 +1909,11 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   
     @property VERSION
     @type String
-    @default '2.6.0'
+    @default '2.6.1'
     @static
     @public
   */
-  Ember.VERSION = '2.6.0';
+  Ember.VERSION = '2.6.1';
 
   /**
     The hash of environment variables used to control various configuration
@@ -2435,7 +2435,6 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   exports.tryInvoke = tryInvoke;
   exports.makeArray = makeArray;
   exports.inspect = inspect;
-  exports.apply = apply;
   exports.applyStr = applyStr;
   exports.lookupDescriptor = lookupDescriptor;
   exports.toString = toString;
@@ -2677,15 +2676,16 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   var HAS_SUPER_PATTERN = /\.(_super|call\(this|apply\(this)/;
+  var fnToString = Function.prototype.toString;
 
   var checkHasSuper = (function () {
-    var sourceAvailable = (function () {
+    var sourceAvailable = fnToString.call(function () {
       return this;
-    }).toString().indexOf('return this') > -1;
+    }).indexOf('return this') > -1;
 
     if (sourceAvailable) {
       return function checkHasSuper(func) {
-        return HAS_SUPER_PATTERN.test(func.toString());
+        return HAS_SUPER_PATTERN.test(fnToString.call(func));
       };
     }
 
@@ -2732,32 +2732,8 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function _wrap(func, superFunc) {
     function superWrapper() {
       var orig = this._super;
-      var length = arguments.length;
-      var ret = undefined;
       this._super = superFunc;
-      switch (length) {
-        case 0:
-          ret = func.call(this);break;
-        case 1:
-          ret = func.call(this, arguments[0]);break;
-        case 2:
-          ret = func.call(this, arguments[0], arguments[1]);break;
-        case 3:
-          ret = func.call(this, arguments[0], arguments[1], arguments[2]);break;
-        case 4:
-          ret = func.call(this, arguments[0], arguments[1], arguments[2], arguments[3]);break;
-        case 5:
-          ret = func.call(this, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]);break;
-        default:
-          // v8 bug potentially incorrectly deopts this function: https://code.google.com/p/v8/issues/detail?id=3709
-          // we may want to keep this around till this ages out on mobile
-          var args = new Array(length);
-          for (var x = 0; x < length; x++) {
-            args[x] = arguments[x];
-          }
-          ret = func.apply(this, args);
-          break;
-      }
+      var ret = func.apply(this, arguments);
       this._super = orig;
       return ret;
     }
@@ -2912,36 +2888,6 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       }
     }
     return '{' + ret.join(', ') + '}';
-  }
-
-  // The following functions are intentionally minified to keep the functions
-  // below Chrome's function body size inlining limit of 600 chars.
-  /**
-    @param {Object} t target
-    @param {Function} m method
-    @param {Array} a args
-    @private
-  */
-
-  function apply(t, m, a) {
-    var l = a && a.length;
-    if (!a || !l) {
-      return m.call(t);
-    }
-    switch (l) {
-      case 1:
-        return m.call(t, a[0]);
-      case 2:
-        return m.call(t, a[0], a[1]);
-      case 3:
-        return m.call(t, a[0], a[1], a[2]);
-      case 4:
-        return m.call(t, a[0], a[1], a[2], a[3]);
-      case 5:
-        return m.call(t, a[0], a[1], a[2], a[3], a[4]);
-      default:
-        return m.apply(t, a);
-    }
   }
 
   /**
@@ -3805,10 +3751,12 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
        ```javascript
       Ember.Logger.assert(true); // undefined
       Ember.Logger.assert(true === false); // Throws an Assertion failed error.
+      Ember.Logger.assert(true === false, 'Something invalid'); // Throws an Assertion failed error with message.
       ```
       @method assert
      @for Ember.Logger
      @param {Boolean} bool Value to test
+     @param {String} message Assertion message on failed
      @public
     */
     assert: consoleMethod('assert') || assertPolyfill
@@ -4287,7 +4235,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
         }
       } else {
         if (params) {
-          _emberMetalUtils.apply(target, method, params);
+          method.apply(target, params);
         } else {
           method.call(target);
         }
@@ -16088,7 +16036,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   // ,'________________                          \`-._`-','
   //  `._              ```````````------...___   '-.._'-:
   //     ```--.._      ,.                     ````--...__\-.
-  //             `.--. `-` "INFINTIY IS LESS     ____    |  |`
+  //             `.--. `-` "INFINITY IS LESS     ____    |  |`
   //               `. `.   THAN BEYOND"        ,'`````.  ;  ;`
   //                 `._`.        __________   `.      \'__/`
   //                    `-:._____/______/___/____`.     \  `
@@ -24149,7 +24097,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       will not immediately trigger an update of the computed property, but
       will instead clear the cache so that it is updated when the next `get`
       is called on the property.
-       See [Ember.ComputedProperty](/api/classes/Ember.ComputedProperty.html), [Ember.computed](/api/#method_computed).
+       See [Ember.ComputedProperty](/api/classes/Ember.ComputedProperty.html), [Ember.computed](/api/classes/Ember.computed.html).
        @method property
       @for Function
       @public
@@ -30733,7 +30681,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     }),
 
     /**
-      Calls a action passed to a component.
+      Calls an action passed to a component.
        For example a component for playing or pausing music may translate click events
       into action notifications of "play" or "stop" depending on some internal state
       of the component:
@@ -33835,95 +33783,410 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   exports.default = RouterState;
 })(Em._e[197],Em._e[35],Em._e[70],Em._e[3]);
 (function (exports) {
-  // Match percent-encoded values (e.g. %3a, %3A, %25)
-  'use strict';
+  "use strict";
 
-  var PERCENT_ENCODED_VALUES = /%[a-fA-F0-9]{2}/g;
-
-  function toUpper(str) {
-    return str.toUpperCase();
+  function Target(path, matcher, delegate) {
+    this.path = path;
+    this.matcher = matcher;
+    this.delegate = delegate;
   }
 
-  // Turn percent-encoded values to upper case ("%3a" -> "%3A")
-  function percentEncodedValuesToUpper(string) {
-    return string.replace(PERCENT_ENCODED_VALUES, toUpper);
-  }
+  Target.prototype = {
+    to: function (target, callback) {
+      var delegate = this.delegate;
 
-  // Normalizes percent-encoded values to upper-case and decodes percent-encoded
-  // values that are not reserved (like unicode characters).
-  // Safe to call multiple times on the same path.
-  function normalizePath(path) {
-    return path.split('/').map(normalizeSegment).join('/');
-  }
+      if (delegate && delegate.willAddRoute) {
+        target = delegate.willAddRoute(this.matcher.target, target);
+      }
 
-  function percentEncode(char) {
-    return '%' + charToHex(char);
-  }
+      this.matcher.add(this.path, target);
 
-  function charToHex(char) {
-    return char.charCodeAt(0).toString(16).toUpperCase();
-  }
-
-  // Decodes percent-encoded values in the string except those
-  // characters in `reservedHex`, where `reservedHex` is an array of 2-character
-  // percent-encodings
-  function decodeURIComponentExcept(string, reservedHex) {
-    if (string.indexOf('%') === -1) {
-      // If there is no percent char, there is no decoding that needs to
-      // be done and we exit early
-      return string;
+      if (callback) {
+        if (callback.length === 0) {
+          throw new Error("You must have an argument in the function passed to `to`");
+        }
+        this.matcher.addChild(this.path, target, callback, this.delegate);
+      }
+      return this;
     }
-    string = percentEncodedValuesToUpper(string);
+  };
 
-    var result = '';
-    var buffer = '';
-    var idx = 0;
-    while (idx < string.length) {
-      var pIdx = string.indexOf('%', idx);
+  function Matcher(target) {
+    this.routes = {};
+    this.children = {};
+    this.target = target;
+  }
 
-      if (pIdx === -1) {
-        // no percent char
-        buffer += string.slice(idx);
-        break;
+  Matcher.prototype = {
+    add: function (path, handler) {
+      this.routes[path] = handler;
+    },
+
+    addChild: function (path, target, callback, delegate) {
+      var matcher = new Matcher(target);
+      this.children[path] = matcher;
+
+      var match = generateMatch(path, matcher, delegate);
+
+      if (delegate && delegate.contextEntered) {
+        delegate.contextEntered(target, match);
+      }
+
+      callback(match);
+    }
+  };
+
+  function generateMatch(startingPath, matcher, delegate) {
+    return function (path, nestedCallback) {
+      var fullPath = startingPath + path;
+
+      if (nestedCallback) {
+        nestedCallback(generateMatch(fullPath, matcher, delegate));
       } else {
-        // found percent char
-        buffer += string.slice(idx, pIdx);
-        idx = pIdx + 3;
+        return new Target(startingPath + path, matcher, delegate);
+      }
+    };
+  }
 
-        var hex = string.slice(pIdx + 1, pIdx + 3);
-        var encoded = '%' + hex;
+  function addRoute(routeArray, path, handler) {
+    var len = 0;
+    for (var i = 0, l = routeArray.length; i < l; i++) {
+      len += routeArray[i].path.length;
+    }
 
-        if (reservedHex.indexOf(hex) === -1) {
-          // encoded is not in reserved set, add to buffer
-          buffer += encoded;
+    path = path.substr(len);
+    var route = { path: path, handler: handler };
+    routeArray.push(route);
+  }
+
+  function eachRoute(baseRoute, matcher, callback, binding) {
+    var routes = matcher.routes;
+
+    for (var path in routes) {
+      if (routes.hasOwnProperty(path)) {
+        var routeArray = baseRoute.slice();
+        addRoute(routeArray, path, routes[path]);
+
+        if (matcher.children[path]) {
+          eachRoute(routeArray, matcher.children[path], callback, binding);
         } else {
-          result += decodeURIComponent(buffer);
-          buffer = '';
-          result += encoded;
+          callback.call(binding, routeArray);
         }
       }
     }
-    result += decodeURIComponent(buffer);
-    return result;
   }
 
-  // Leave these characters in encoded state in segments
-  var reservedSegmentChars = ['%', '/'];
-  var reservedHex = reservedSegmentChars.map(charToHex);
+  exports.default = function (callback, addRouteCallback) {
+    var matcher = new Matcher();
 
-  function normalizeSegment(segment) {
-    return decodeURIComponentExcept(segment, reservedHex);
+    callback(generateMatch("", matcher, this.delegate));
+
+    eachRoute([], matcher, function (route) {
+      if (addRouteCallback) {
+        addRouteCallback(this, route);
+      } else {
+        this.add(route);
+      }
+    }, this);
+  };
+})(Em._e[198]);
+(function (exports, _routeRecognizerDsl) {
+  'use strict';
+
+  var specials = ['/', '.', '*', '+', '?', '|', '(', ')', '[', ']', '{', '}', '\\'];
+
+  var escapeRegex = new RegExp('(\\' + specials.join('|\\') + ')', 'g');
+
+  function isArray(test) {
+    return Object.prototype.toString.call(test) === "[object Array]";
   }
 
-  var Normalizer = {
-    normalizeSegment: normalizeSegment,
-    normalizePath: normalizePath
+  // A Segment represents a segment in the original route description.
+  // Each Segment type provides an `eachChar` and `regex` method.
+  //
+  // The `eachChar` method invokes the callback with one or more character
+  // specifications. A character specification consumes one or more input
+  // characters.
+  //
+  // The `regex` method returns a regex fragment for the segment. If the
+  // segment is a dynamic of star segment, the regex fragment also includes
+  // a capture.
+  //
+  // A character specification contains:
+  //
+  // * `validChars`: a String with a list of all valid characters, or
+  // * `invalidChars`: a String with a list of all invalid characters
+  // * `repeat`: true if the character specification can repeat
+
+  function StaticSegment(string) {
+    this.string = string;
+  }
+  StaticSegment.prototype = {
+    eachChar: function (callback) {
+      var string = this.string,
+          ch;
+
+      for (var i = 0, l = string.length; i < l; i++) {
+        ch = string.charAt(i);
+        callback({ validChars: ch });
+      }
+    },
+
+    regex: function () {
+      return this.string.replace(escapeRegex, '\\$1');
+    },
+
+    generate: function () {
+      return this.string;
+    }
   };
 
-  exports.default = Normalizer;
-})(Em._e[198]);
-(function (exports) {
-  "use strict";
+  function DynamicSegment(name) {
+    this.name = name;
+  }
+  DynamicSegment.prototype = {
+    eachChar: function (callback) {
+      callback({ invalidChars: "/", repeat: true });
+    },
+
+    regex: function () {
+      return "([^/]+)";
+    },
+
+    generate: function (params) {
+      return params[this.name];
+    }
+  };
+
+  function StarSegment(name) {
+    this.name = name;
+  }
+  StarSegment.prototype = {
+    eachChar: function (callback) {
+      callback({ invalidChars: "", repeat: true });
+    },
+
+    regex: function () {
+      return "(.+)";
+    },
+
+    generate: function (params) {
+      return params[this.name];
+    }
+  };
+
+  function EpsilonSegment() {}
+  EpsilonSegment.prototype = {
+    eachChar: function () {},
+    regex: function () {
+      return "";
+    },
+    generate: function () {
+      return "";
+    }
+  };
+
+  function parse(route, names, types) {
+    // normalize route as not starting with a "/". Recognition will
+    // also normalize.
+    if (route.charAt(0) === "/") {
+      route = route.substr(1);
+    }
+
+    var segments = route.split("/"),
+        results = [];
+
+    for (var i = 0, l = segments.length; i < l; i++) {
+      var segment = segments[i],
+          match;
+
+      if (match = segment.match(/^:([^\/]+)$/)) {
+        results.push(new DynamicSegment(match[1]));
+        names.push(match[1]);
+        types.dynamics++;
+      } else if (match = segment.match(/^\*([^\/]+)$/)) {
+        results.push(new StarSegment(match[1]));
+        names.push(match[1]);
+        types.stars++;
+      } else if (segment === "") {
+        results.push(new EpsilonSegment());
+      } else {
+        results.push(new StaticSegment(segment));
+        types.statics++;
+      }
+    }
+
+    return results;
+  }
+
+  // A State has a character specification and (`charSpec`) and a list of possible
+  // subsequent states (`nextStates`).
+  //
+  // If a State is an accepting state, it will also have several additional
+  // properties:
+  //
+  // * `regex`: A regular expression that is used to extract parameters from paths
+  //   that reached this accepting state.
+  // * `handlers`: Information on how to convert the list of captures into calls
+  //   to registered handlers with the specified parameters
+  // * `types`: How many static, dynamic or star segments in this route. Used to
+  //   decide which route to use if multiple registered routes match a path.
+  //
+  // Currently, State is implemented naively by looping over `nextStates` and
+  // comparing a character specification against a character. A more efficient
+  // implementation would use a hash of keys pointing at one or more next states.
+
+  function State(charSpec) {
+    this.charSpec = charSpec;
+    this.nextStates = [];
+  }
+
+  State.prototype = {
+    get: function (charSpec) {
+      var nextStates = this.nextStates;
+
+      for (var i = 0, l = nextStates.length; i < l; i++) {
+        var child = nextStates[i];
+
+        var isEqual = child.charSpec.validChars === charSpec.validChars;
+        isEqual = isEqual && child.charSpec.invalidChars === charSpec.invalidChars;
+
+        if (isEqual) {
+          return child;
+        }
+      }
+    },
+
+    put: function (charSpec) {
+      var state;
+
+      // If the character specification already exists in a child of the current
+      // state, just return that state.
+      if (state = this.get(charSpec)) {
+        return state;
+      }
+
+      // Make a new state for the character spec
+      state = new State(charSpec);
+
+      // Insert the new state as a child of the current state
+      this.nextStates.push(state);
+
+      // If this character specification repeats, insert the new state as a child
+      // of itself. Note that this will not trigger an infinite loop because each
+      // transition during recognition consumes a character.
+      if (charSpec.repeat) {
+        state.nextStates.push(state);
+      }
+
+      // Return the new state
+      return state;
+    },
+
+    // Find a list of child states matching the next character
+    match: function (ch) {
+      // DEBUG "Processing `" + ch + "`:"
+      var nextStates = this.nextStates,
+          child,
+          charSpec,
+          chars;
+
+      // DEBUG "  " + debugState(this)
+      var returned = [];
+
+      for (var i = 0, l = nextStates.length; i < l; i++) {
+        child = nextStates[i];
+
+        charSpec = child.charSpec;
+
+        if (typeof (chars = charSpec.validChars) !== 'undefined') {
+          if (chars.indexOf(ch) !== -1) {
+            returned.push(child);
+          }
+        } else if (typeof (chars = charSpec.invalidChars) !== 'undefined') {
+          if (chars.indexOf(ch) === -1) {
+            returned.push(child);
+          }
+        }
+      }
+
+      return returned;
+    }
+
+    /** IF DEBUG
+    , debug: function() {
+      var charSpec = this.charSpec,
+          debug = "[",
+          chars = charSpec.validChars || charSpec.invalidChars;
+       if (charSpec.invalidChars) { debug += "^"; }
+      debug += chars;
+      debug += "]";
+       if (charSpec.repeat) { debug += "+"; }
+       return debug;
+    }
+    END IF **/
+  };
+
+  /** IF DEBUG
+  function debug(log) {
+    console.log(log);
+  }
+  
+  function debugState(state) {
+    return state.nextStates.map(function(n) {
+      if (n.nextStates.length === 0) { return "( " + n.debug() + " [accepting] )"; }
+      return "( " + n.debug() + " <then> " + n.nextStates.map(function(s) { return s.debug() }).join(" or ") + " )";
+    }).join(", ")
+  }
+  END IF **/
+
+  // This is a somewhat naive strategy, but should work in a lot of cases
+  // A better strategy would properly resolve /posts/:id/new and /posts/edit/:id.
+  //
+  // This strategy generally prefers more static and less dynamic matching.
+  // Specifically, it
+  //
+  //  * prefers fewer stars to more, then
+  //  * prefers using stars for less of the match to more, then
+  //  * prefers fewer dynamic segments to more, then
+  //  * prefers more static segments to more
+  function sortSolutions(states) {
+    return states.sort(function (a, b) {
+      if (a.types.stars !== b.types.stars) {
+        return a.types.stars - b.types.stars;
+      }
+
+      if (a.types.stars) {
+        if (a.types.statics !== b.types.statics) {
+          return b.types.statics - a.types.statics;
+        }
+        if (a.types.dynamics !== b.types.dynamics) {
+          return b.types.dynamics - a.types.dynamics;
+        }
+      }
+
+      if (a.types.dynamics !== b.types.dynamics) {
+        return a.types.dynamics - b.types.dynamics;
+      }
+      if (a.types.statics !== b.types.statics) {
+        return b.types.statics - a.types.statics;
+      }
+
+      return 0;
+    });
+  }
+
+  function recognizeChar(states, ch) {
+    var nextStates = [];
+
+    for (var i = 0, l = states.length; i < l; i++) {
+      var state = states[i];
+
+      nextStates = nextStates.concat(state.match(ch));
+    }
+
+    return nextStates;
+  }
 
   var oCreate = Object.create || function (proto) {
     function F() {}
@@ -33931,564 +34194,132 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     return new F();
   };
 
-  function bind(fn, scope) {
-    return function () {
-      return fn.apply(scope, arguments);
-    };
-  }
-
-  function isArray(test) {
-    return Object.prototype.toString.call(test) === "[object Array]";
-  }
-
-  exports.bind = bind;
-  exports.isArray = isArray;
-  exports.oCreate = oCreate;
-})(Em._e[199]);
-(function (exports, _routeRecognizerPolyfills) {
-  'use strict';
-
-  // This object is the accumulator for handlers when recognizing a route.
-  // It's nothing more than an array with a bonus property.
   function RecognizeResults(queryParams) {
     this.queryParams = queryParams || {};
   }
-  RecognizeResults.prototype = _routeRecognizerPolyfills.oCreate({
+  RecognizeResults.prototype = oCreate({
     splice: Array.prototype.splice,
     slice: Array.prototype.slice,
     push: Array.prototype.push,
-    pop: Array.prototype.pop,
     length: 0,
     queryParams: null
   });
 
-  exports.default = RecognizeResults;
-})(Em._e[200],Em._e[199]);
-(function (exports, _routeRecognizerNormalizer, _routeRecognizerPolyfills) {
-  'use strict';
+  function findHandler(state, path, queryParams) {
+    var handlers = state.handlers,
+        regex = state.regex;
+    var captures = path.match(regex),
+        currentCapture = 1;
+    var result = new RecognizeResults(queryParams);
 
-  var normalizePath = _routeRecognizerNormalizer.default.normalizePath;
+    for (var i = 0, l = handlers.length; i < l; i++) {
+      var handler = handlers[i],
+          names = handler.names,
+          params = {};
 
-  var router;
-
-  /**
-    Matcher is just a clever recursive function that 
-   */
-  function matcher(source) {
-    return function (path, callback) {
-      var leaf;
-      if (source === 'map' && this === this.router.rootState) {
-        router = this.router;
-        leaf = new SegmentTrieNode({ addRouteCallback: true, nodes: [] }, '');
-      } else {
-        leaf = this;
+      for (var j = 0, m = names.length; j < m; j++) {
+        params[names[j]] = captures[currentCapture++];
       }
 
-      var segments = path.replace(/^\//, '').split('/');
+      result.push({ handler: handler.handler, params: params, isDynamic: !!names.length });
+    }
 
-      // As we're adding segments we need to track the current leaf.
-      for (var i = 0; i < segments.length; i++) {
-        segments[i] = new SegmentTrieNode(this.router, segments[i]);
-
-        leaf.append(segments[i]);
-        leaf = segments[i];
-      }
-
-      if (callback) {
-        // No handler, delegate back to the TrieNode's `to` method.
-        leaf.to(undefined, callback, source);
-      }
-
-      return leaf;
-    };
+    return result;
   }
 
-  /**
-  SegmentTrieNode is simply a radix trie where each radix
-  corresponds to a path segment in the RouteRecognizer microsyntax.
-  */
-  function SegmentTrieNode(router, value) {
-    var normalized;
+  function addSegment(currentState, segment) {
+    segment.eachChar(function (ch) {
+      var state;
 
-    // Maintain a reference to the router so we can grab serialized
-    // nodes off of it in case we're not fully initialized.
-    this.router = router;
+      currentState = currentState.put(ch);
+    });
 
-    // `value` is either a string or a serialized SegmentTrieNode.
-    if (typeof value === 'string') {
-      this.id = router.nodes.push(this) - 1;
-      this.value = value;
-      this.originalValue = undefined;
-
-      switch (this.value.charCodeAt(0)) {
-        case 58:
-          this.type = 'param';break; // : => 58
-        case 42:
-          this.type = 'glob';break; // * => 42
-        default:
-          this.type = 'static';
-          normalized = normalizePath(this.value);
-          // We match against a normalized value.
-          // Keep the original value for error messaging.
-          if (normalized !== this.value) {
-            this.originalValue = this.value;
-            this.value = normalized;
-          }
-          break;
-      }
-
-      this.handler = undefined;
-      this.childNodes = [];
-      this.parentNode = undefined;
-    } else {
-      this.id = value.id;
-      this.value = value.value;
-      this.originalValue = value.originalValue;
-      this.type = value.type;
-      this.handler = value.handler;
-      this.childNodes = value.childNodes || [];
-      this.parentNode = value.parentNode;
-    }
+    return currentState;
   }
-
-  SegmentTrieNode.prototype = {
-
-    // Naively add a new child to the current trie node.
-    append: function (trieNode) {
-      this.childNodes.push(trieNode);
-      trieNode.parentNode = this;
-      return this;
-    },
-
-    // Reduce the amount of space which is needed to represent the
-    // radix trie by collapsing common prefixes.
-    compact: function () {
-      if (this.childNodes.length === 0) {
-        return;
-      }
-
-      // Depth-first compaction.
-      this.childNodes.forEach(function (trieNode) {
-        trieNode.compact();
-      });
-
-      // Collapse sibling nodes.
-      this.childNodes = this.childNodes.filter(function (trieNode, index, siblingNodes) {
-        var segmentSeen = false;
-
-        // Scan only segments before this one to see if we've already got a match.
-        for (var i = 0; i < index && segmentSeen === false; i++) {
-          segmentSeen = siblingNodes[i].value === trieNode.value && siblingNodes[i].handler === trieNode.handler && (trieNode.name === siblingNodes[i].name || trieNode.name === undefined || siblingNodes[i].name === undefined);
-        }
-
-        if (segmentSeen) {
-          var targetNode = siblingNodes[i - 1];
-
-          // Reset the parentNode for each trieNode to the targetNode.
-          trieNode.childNodes.forEach(function (trieNode) {
-            trieNode.parentNode = targetNode;
-          });
-
-          targetNode.name = targetNode.name || trieNode.name;
-
-          // Concat the childNodes of the active trieNode with the targetNode.
-          targetNode.childNodes = targetNode.childNodes.concat(trieNode.childNodes);
-
-          // Then re-compact the joined trie.
-          targetNode.compact();
-        }
-
-        return !segmentSeen;
-      });
-
-      // Sort nodes to get an approximation of specificity.
-      this.childNodes.sort(function (a, b) {
-        var ascore, bscore;
-        switch (a.type) {
-          case "static":
-            ascore = 0;break;
-          case "param":
-            ascore = 1;break;
-          case "glob":
-            ascore = 2;break;
-        }
-        switch (b.type) {
-          case "static":
-            bscore = 0;break;
-          case "param":
-            bscore = 1;break;
-          case "glob":
-            bscore = 2;break;
-        }
-
-        return ascore > bscore;
-      });
-    },
-
-    // Can't just blindly return itself.
-    // Minimizes individual object size.
-    // Only called at build time.
-    toJSON: function () {
-      var childNodeCount = this.childNodes.length;
-
-      var result = {
-        id: this.id,
-        type: this.type,
-        value: this.value,
-        handler: this.handler
-      };
-
-      if (this.originalValue) {
-        result.originalValue = this.originalValue;
-      }
-
-      if (this.handler) {
-        result.handler = this.handler;
-      }
-
-      // Set up parentNode reference.
-      if (this.parentNode) {
-        result.parentNode = this.parentNode.id;
-      }
-
-      // Set up childNodes references.
-      if (childNodeCount) {
-        result.childNodes = new Array(childNodeCount);
-        for (var i = 0; i < childNodeCount; i++) {
-          result.childNodes[i] = this.childNodes[i].id;
-        }
-      }
-
-      return result;
-    },
-
-    /**
-      Binds a handler to this trie node.
-      If it receives a callback it will continue matching.
-      @public
-     */
-    to: function (handler, callback, source) {
-      this.handler = handler;
-
-      if (handler && this.router.addRouteCallback && source !== 'add') {
-        var routes = [];
-        var trieNode = this;
-        var current = {
-          path: '/' + trieNode.value,
-          handler: trieNode.handler
-        };
-
-        while (trieNode = trieNode.parentNode) {
-          if (trieNode.handler) {
-            if (current) {
-              routes.unshift(current);
-              current = {
-                path: '/' + trieNode.value,
-                handler: trieNode.handler
-              };
-            } else {
-              current.path = trieNode.value === '' ? current.path : '/' + trieNode.value + current.path;
-            }
-          } else {
-            current.path = trieNode.value === '' ? current.path : '/' + trieNode.value + current.path;
-          }
-        }
-
-        routes.unshift(current);
-        this.router.addRouteCallback(router, routes);
-      }
-
-      if (callback) {
-        if (callback.length === 0) {
-          throw new Error("You must have an argument in the function passed to `to`");
-        }
-        callback(_routeRecognizerPolyfills.bind(matcher(source), this));
-      }
-
-      return this;
-    },
-
-    /**
-      Our goal is to try and match based upon the node type. For non-globbing
-      routes we can simply pop a segment off of the path and continue, eliminating
-      entire branches as we go. Average number of comparisons is:
-        `Number of Trie Nodes / Average Depth / 2`
-       If we reach a globbing route we have to change strategy and traverse to all
-      descendent leaf nodes until we find a match. As we traverse we build up a
-      regular expression that would match beginning with that globbing route. We
-      leverage the regular expression to handle the mechanics of greedy pattern
-      matching with back-tracing. The average number of comparisons beyond a
-      globbing route:
-        `Number of Trie Nodes / 2`
-       This could be optimized further to do O(1) matching for non-globbing
-      segments but that is overkill for this use case.
-    */
-    walk: function (path, handlers, params, regexPieces) {
-      var isLeafNode = this.childNodes.length === 0;
-      var isTerminalNode = this.handler;
-      var nodeMatches = false;
-      var nextNode = this;
-      var consumed = false;
-      var segmentIndex = 0;
-
-      // Identify the node type so we know how to match it.
-      switch (this.type) {
-        case "static":
-          if (regexPieces) {
-            // If we're descended from a globbing route.
-            regexPieces.push(this.value);
-          } else {
-            // Matches if the path to recognize is identical to the node value.
-            segmentIndex = this.value.length;
-
-            if (segmentIndex === 0) {
-              // If the segment is an empty-length string.
-              nodeMatches = true;
-            } else {
-              // Get the first segment and compare.
-              nodeMatches = path.split('/')[0] === this.value;
-            }
-
-            if (nodeMatches) {
-              path = path.substring(segmentIndex);
-
-              // "/".charCodeAt(0) === 47
-              if (path.charCodeAt(0) === 47) {
-                path = path.substr(1);
-              }
-            }
-          }
-          break;
-        case "param":
-          if (regexPieces) {
-            // If we're descended from a globbing route.
-            regexPieces.push('([^/]+)');
-            params[this.value.substring(1)] = { regex: true, index: regexPieces.length };
-          } else {
-            // Valid for '/' to not appear, or appear anywhere but the 0th index.
-            // 0 length or 0th index would result in an non-matching empty param.
-            segmentIndex = path.indexOf('/');
-            if (segmentIndex === -1) {
-              segmentIndex = path.length;
-            }
-
-            nodeMatches = path.length > 0 && segmentIndex > 0;
-            if (nodeMatches) {
-              if (this.router.ENCODE_AND_DECODE_PATH_SEGMENTS) {
-                params[this.value.substring(1)] = decodeURIComponent(path.substr(0, segmentIndex));
-              } else {
-                params[this.value.substring(1)] = path.substr(0, segmentIndex);
-              }
-              path = path.substring(segmentIndex + 1);
-            }
-          }
-          break;
-        case "glob":
-          // We can no longer do prefix matching. Prepare to traverse leaves.
-
-          // It's possible to have multiple globbing routes in a single path.
-          // So maybe we already have a `regexPieces` array.
-          if (!regexPieces) {
-            regexPieces = [];
-          }
-
-          if (isLeafNode) {
-            // If a glob is the leaf node we don't match a trailing slash.
-            regexPieces.push('(.+)(?:/?)');
-          } else {
-            // Consume the segment. `regexPieces.join` adds the '/'.
-            regexPieces.push('(.+)');
-          }
-          params[this.value.substring(1)] = { regex: true, index: regexPieces.length };
-          break;
-      }
-
-      // Short-circuit for nodes that can't possibly match.
-      if (!nodeMatches && !regexPieces) {
-        return false;
-      }
-
-      if (this.handler) {
-        handlers.push({
-          handler: this.handler,
-          params: params,
-          isDynamic: this.type !== "static"
-        });
-      }
-
-      var nextParams = this.handler ? {} : params;
-
-      // Depth-first traversal of childNodes. No-op for leaf nodes.
-      for (var i = 0; i < this.childNodes.length; i++) {
-        nextNode = this.childNodes[i].walk(path, handlers, nextParams, regexPieces);
-
-        // Stop traversing once we have a match since we're sorted by specificity.
-        if (!!nextNode) {
-          break;
-        }
-      }
-
-      // If we're at a terminal node find out if we've consumed the entire path.
-      if (isTerminalNode) {
-        if (regexPieces) {
-          var myregex = new RegExp('^' + regexPieces.join('/') + '$');
-          var matches = myregex.exec(path);
-          consumed = !!matches;
-
-          if (consumed) {
-            // Need to move matches to the correct params location.
-            for (var j = 0; j < handlers.length; j++) {
-              for (var x in handlers[i].params) {
-                if (handlers[i].params[x].regex) {
-                  handlers[i].params[x] = matches[handlers[i].params[x].index];
-                }
-              }
-            }
-          } else {
-            // We pushed a segment onto the regexPieces, but this wasn't a match.
-            // Pop it back off for the next go-round.
-            regexPieces.pop();
-          }
-        } else {
-          consumed = path.length === 0;
-        }
-      }
-
-      // `consumed` is false unless set above.
-      if (!consumed && (isLeafNode || !nextNode)) {
-        if (this.handler) {
-          handlers.pop();
-        }
-        return false;
-      } else {
-        return nextNode;
-      }
-    },
-
-    wire: function () {
-      this.parentNode = this.router.nodes[this.parentNode];
-      for (var i = 0; i < this.childNodes.length; i++) {
-        this.childNodes[i] = this.router.nodes[this.childNodes[i]];
-      }
-    }
-  };
-
-  exports.matcher = matcher;
-  exports.default = SegmentTrieNode;
-})(Em._e[201],Em._e[198],Em._e[199]);
-(function (exports, _routeRecognizerNormalizer, _routeRecognizerRecognizeResults, _routeRecognizerSegmentTrieNode, _routeRecognizerPolyfills) {
-  'use strict';
-
-  var normalizePath = _routeRecognizerNormalizer.default.normalizePath;
-  var normalizeSegment = _routeRecognizerNormalizer.default.normalizeSegment;
 
   function decodeQueryParamPart(part) {
     // http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1
     part = part.replace(/\+/gm, '%20');
-    var result;
-    try {
-      result = decodeURIComponent(part);
-    } catch (error) {
-      result = '';
-    }
-    return result;
+    return decodeURIComponent(part);
   }
 
-  function RouteRecognizer(serialized) {
-    this.ENCODE_AND_DECODE_PATH_SEGMENTS = RouteRecognizer.ENCODE_AND_DECODE_PATH_SEGMENTS;
+  // The main interface
+
+  var RouteRecognizer = function () {
+    this.rootState = new State();
     this.names = {};
-
-    if (serialized) {
-      this.compacted = true;
-      this.nodes = new Array(serialized.nodes.length);
-
-      for (var i = 0; i < serialized.nodes.length; i++) {
-        if (!serialized.nodes[i]) {
-          continue;
-        }
-        this.nodes[i] = new _routeRecognizerSegmentTrieNode.default(this, serialized.nodes[i]);
-      }
-
-      for (i = 0; i < serialized.nodes.length; i++) {
-        if (!serialized.nodes[i]) {
-          continue;
-        }
-        this.nodes[i].wire();
-      }
-
-      for (var x in serialized.names) {
-        if (!serialized.names.hasOwnProperty(x)) {
-          return;
-        }
-        this.names[x] = this.nodes[serialized.names[x]];
-      }
-
-      this.rootState = this.nodes[serialized.rootState];
-    } else {
-      this.compacted = false;
-      this.nodes = [];
-      this.rootState = new _routeRecognizerSegmentTrieNode.default(this, '');
-    }
-  }
+  };
 
   RouteRecognizer.prototype = {
     add: function (routes, options) {
-      this.compacted = false;
-      options = options || {};
-      var leaf = this.rootState;
+      var currentState = this.rootState,
+          regex = "^",
+          types = { statics: 0, dynamics: 0, stars: 0 },
+          handlers = [],
+          allSegments = [],
+          name;
 
-      // Go through each passed in route and call the matcher with it.
-      for (var i = 0; i < routes.length; i++) {
-        leaf = _routeRecognizerSegmentTrieNode.matcher('add').call(leaf, routes[i].path);
-        leaf.to(routes[i].handler, undefined, 'add');
+      var isEmpty = true;
+
+      for (var i = 0, l = routes.length; i < l; i++) {
+        var route = routes[i],
+            names = [];
+
+        var segments = parse(route.path, names, types);
+
+        allSegments = allSegments.concat(segments);
+
+        for (var j = 0, m = segments.length; j < m; j++) {
+          var segment = segments[j];
+
+          if (segment instanceof EpsilonSegment) {
+            continue;
+          }
+
+          isEmpty = false;
+
+          // Add a "/" for the new segment
+          currentState = currentState.put({ validChars: "/" });
+          regex += "/";
+
+          // Add a representation of the segment to the NFA and regex
+          currentState = addSegment(currentState, segment);
+          regex += segment.regex();
+        }
+
+        var handler = { handler: route.handler, names: names };
+        handlers.push(handler);
       }
-      leaf.name = options.as;
-      this.names[options.as] = leaf;
+
+      if (isEmpty) {
+        currentState = currentState.put({ validChars: "/" });
+        regex += "/";
+      }
+
+      currentState.handlers = handlers;
+      currentState.regex = new RegExp(regex + "$");
+      currentState.types = types;
+
+      if (name = options && options.as) {
+        this.names[name] = {
+          segments: allSegments,
+          handlers: handlers
+        };
+      }
     },
 
     handlersFor: function (name) {
-      var trieNode = this.names[name];
-
-      if (!trieNode) {
+      var route = this.names[name],
+          result = [];
+      if (!route) {
         throw new Error("There is no route named " + name);
       }
 
-      var handlers = [];
-      var current = {
-        handler: trieNode.handler,
-        names: []
-      };
-
-      if (trieNode.type === 'param') {
-        // current.names.push({ name: trieNode.value.substr(1), decode: true });
-        current.names.push(trieNode.value.substr(1));
-      }
-      if (trieNode.type === 'glob') {
-        // current.names.push({ name: trieNode.value.substr(1), decode: false });
-        current.names.push(trieNode.value.substr(1));
+      for (var i = 0, l = route.handlers.length; i < l; i++) {
+        result.push(route.handlers[i]);
       }
 
-      while (trieNode = trieNode.parentNode) {
-        if (trieNode.handler) {
-          handlers.push(current);
-
-          current = {
-            handler: trieNode.handler,
-            names: []
-          };
-        }
-        if (trieNode.type === 'param') {
-          // current.names.unshift({ name: trieNode.value.substr(1), decode: true });
-          current.names.unshift(trieNode.value.substr(1));
-        }
-        if (trieNode.type === 'glob') {
-          // current.names.unshift({ name: trieNode.value.substr(1), decode: false });
-          current.names.unshift(trieNode.value.substr(1));
-        }
-      }
-
-      handlers.push(current);
-      return handlers.reverse();
+      return result;
     },
 
     hasRoute: function (name) {
@@ -34496,57 +34327,37 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     },
 
     generate: function (name, params) {
-      if (!this.compacted) {
-        this.rootState.compact();this.compacted = true;
-      }
-
-      var output = "";
-      var trieNode = this.names[name];
-
-      if (!trieNode) {
+      var route = this.names[name],
+          output = "";
+      if (!route) {
         throw new Error("There is no route named " + name);
       }
 
-      var segments = [];
-      do {
-        // `push` is much faster than `unshift`
-        segments.push(trieNode);
-      } while (trieNode = trieNode.parentNode);
+      var segments = route.segments;
 
-      // But it does mean we have to iterate over these backward.
-      for (var i = segments.length - 1; i >= 0; i--) {
-        trieNode = segments[i];
+      for (var i = 0, l = segments.length; i < l; i++) {
+        var segment = segments[i];
 
-        if (trieNode.type === 'static') {
-          if (trieNode.value === '') {
-            continue;
-          }
-          output += '/' + trieNode.value;
-        } else if (trieNode.type === 'param') {
-          if (this.ENCODE_AND_DECODE_PATH_SEGMENTS) {
-            output += '/' + encodeURIComponent(params[trieNode.value.substr(1)]);
-          } else {
-            output += '/' + params[trieNode.value.substr(1)];
-          }
-        } else if (trieNode.type === 'glob') {
-          output += '/' + params[trieNode.value.substr(1)];
-        } else {
-          output += '/' + params[trieNode.value.substr(1)];
+        if (segment instanceof EpsilonSegment) {
+          continue;
         }
+
+        output += "/";
+        output += segment.generate(params);
+      }
+
+      if (output.charAt(0) !== '/') {
+        output = '/' + output;
       }
 
       if (params && params.queryParams) {
-        output += this.generateQueryString(params.queryParams);
+        output += this.generateQueryString(params.queryParams, route.handlers);
       }
 
-      // "/".charCodeAt(0) === 47
-      if (output.charCodeAt(0) !== 47) {
-        output = '/' + output;
-      }
       return output;
     },
 
-    generateQueryString: function (params) {
+    generateQueryString: function (params, handlers) {
       var pairs = [];
       var keys = [];
       for (var key in params) {
@@ -34555,15 +34366,15 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
         }
       }
       keys.sort();
-      for (var i = 0; i < keys.length; i++) {
+      for (var i = 0, len = keys.length; i < len; i++) {
         key = keys[i];
         var value = params[key];
         if (value == null) {
           continue;
         }
         var pair = encodeURIComponent(key);
-        if (_routeRecognizerPolyfills.isArray(value)) {
-          for (var j = 0; j < value.length; j++) {
+        if (isArray(value)) {
+          for (var j = 0, l = value.length; j < l; j++) {
             var arrayPair = key + '[]' + '=' + encodeURIComponent(value[j]);
             pairs.push(arrayPair);
           }
@@ -34578,12 +34389,6 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       }
 
       return "?" + pairs.join("&");
-    },
-
-    map: function (callback, addRouteCallback) {
-      this.compacted = false;
-      this.addRouteCallback = addRouteCallback;
-      callback(_routeRecognizerPolyfills.bind(_routeRecognizerSegmentTrieNode.matcher('map'), this.rootState));
     },
 
     parseQueryString: function (queryString) {
@@ -34618,96 +34423,72 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     },
 
     recognize: function (path) {
-      if (!this.compacted) {
-        this.rootState.compact();this.compacted = true;
-      }
+      var states = [this.rootState],
+          pathLen,
+          i,
+          l,
+          queryStart,
+          queryParams = {},
+          isSlashDropped = false;
 
-      var hashStart = path.indexOf('#');
-      if (hashStart !== -1) {
-        path = path.substr(0, hashStart);
-      }
-
-      var queryString, queryParams;
-      var queryStart = path.indexOf('?');
+      queryStart = path.indexOf('?');
       if (queryStart !== -1) {
-        queryString = path.substr(queryStart + 1, path.length);
+        var queryString = path.substr(queryStart + 1, path.length);
         path = path.substr(0, queryStart);
         queryParams = this.parseQueryString(queryString);
       }
 
-      // "/".charCodeAt(0) === 47
-      if (path.charCodeAt(0) === 47) {
-        path = path.substr(1);
+      path = decodeURI(path);
+
+      // DEBUG GROUP path
+
+      if (path.charAt(0) !== "/") {
+        path = "/" + path;
       }
 
-      if (this.ENCODE_AND_DECODE_PATH_SEGMENTS) {
-        path = normalizePath(path);
-      } else {
-        path = decodeURI(path);
+      pathLen = path.length;
+      if (pathLen > 1 && path.charAt(pathLen - 1) === "/") {
+        path = path.substr(0, pathLen - 1);
+        isSlashDropped = true;
       }
 
-      var handlers = new _routeRecognizerRecognizeResults.default(queryParams);
-      var trieNode = this.rootState.walk(path, handlers, {});
-
-      if (trieNode) {
-        return handlers;
-      } else {
-        return null;
-      }
-    },
-
-    toJSON: function () {
-      if (!this.compacted) {
-        this.rootState.compact();this.compacted = true;
-      }
-
-      // Rebuild the names property as a series of ID references.
-      var names = {};
-      for (var x in this.names) {
-        if (!this.names.hasOwnProperty(x)) {
-          return;
-        }
-        names[x] = this.names[x].id;
-      }
-
-      // Could have unnecessary references after compacting.
-      var parentsChildren = [];
-      for (var i = 0; i < this.nodes.length; i++) {
-        // Skip the root state.
-        if (!this.nodes[i] || !this.nodes[i].parentNode) {
-          continue;
-        }
-
-        // Reduce childNodes to a collection of IDs.
-        parentsChildren = this.nodes[i].parentNode.childNodes.map(function (trieNode) {
-          return trieNode.id;
-        });
-
-        // If we don't find it the current ID on the parent, drop it.
-        if (! ~parentsChildren.indexOf(this.nodes[i].id)) {
-          this.nodes[i] = undefined;
+      for (i = 0, l = path.length; i < l; i++) {
+        states = recognizeChar(states, path.charAt(i));
+        if (!states.length) {
+          break;
         }
       }
 
-      // Return an object which can be rehydrated.
-      return {
-        names: names,
-        rootState: this.rootState.id,
-        nodes: this.nodes
-      };
+      // END DEBUG GROUP
+
+      var solutions = [];
+      for (i = 0, l = states.length; i < l; i++) {
+        if (states[i].handlers) {
+          solutions.push(states[i]);
+        }
+      }
+
+      states = sortSolutions(solutions);
+
+      var state = solutions[0];
+
+      if (state && state.handlers) {
+        // if a trailing slash was dropped and a star segment is the last segment
+        // specified, put the trailing slash back
+        if (isSlashDropped && state.regex.source.slice(-5) === "(.+)$") {
+          path = path + "/";
+        }
+        return findHandler(state, path, queryParams);
+      }
     }
   };
 
-  RouteRecognizer.VERSION = '0.1.11';
+  RouteRecognizer.prototype.map = _routeRecognizerDsl.default;
 
-  // Set to false to opt-out of encoding and decoding path segments.
-  // See https://github.com/tildeio/route-recognizer/pull/55
-  RouteRecognizer.ENCODE_AND_DECODE_PATH_SEGMENTS = true;
-
-  RouteRecognizer.Normalizer = _routeRecognizerNormalizer.default;
+  RouteRecognizer.VERSION = '0.1.5';
 
   exports.default = RouteRecognizer;
-})(Em._e[202],Em._e[198],Em._e[200],Em._e[201],Em._e[199]);
+})(Em._e[199],Em._e[198]);
 (function (exports) {
   'use strict';
 
@@ -34952,7 +34733,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   exports.callHook = callHook;
   exports.resolveHook = resolveHook;
   exports.applyHook = applyHook;
-})(Em._e[203]);
+})(Em._e[200]);
 (function (exports, _routerUtils, _rsvpPromise) {
   'use strict';
 
@@ -35112,7 +34893,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = HandlerInfo;
-})(Em._e[204],Em._e[203],Em._e[112]);
+})(Em._e[201],Em._e[200],Em._e[112]);
 (function (exports, _routerHandlerInfo, _routerUtils, _rsvpPromise) {
   'use strict';
 
@@ -35218,7 +34999,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   };
 
   exports.default = TransitionState;
-})(Em._e[205],Em._e[204],Em._e[203],Em._e[112]);
+})(Em._e[202],Em._e[201],Em._e[200],Em._e[112]);
 (function (exports, _rsvpPromise, _routerHandlerInfo, _routerUtils) {
   'use strict';
 
@@ -35526,7 +35307,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   exports.Transition = Transition;
   exports.logAbort = logAbort;
   exports.TransitionAborted = TransitionAborted;
-})(Em._e[206],Em._e[112],Em._e[204],Em._e[203]);
+})(Em._e[203],Em._e[112],Em._e[201],Em._e[200]);
 (function (exports, _routerUtils) {
   'use strict';
 
@@ -35543,7 +35324,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   };
 
   exports.default = TransitionIntent;
-})(Em._e[207],Em._e[203]);
+})(Em._e[204],Em._e[200]);
 (function (exports, _routerHandlerInfo, _routerUtils, _rsvpPromise) {
   'use strict';
 
@@ -35568,7 +35349,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = ResolvedHandlerInfo;
-})(Em._e[208],Em._e[204],Em._e[203],Em._e[112]);
+})(Em._e[205],Em._e[201],Em._e[200],Em._e[112]);
 (function (exports, _routerHandlerInfo, _routerUtils, _rsvpPromise) {
   'use strict';
 
@@ -35622,7 +35403,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = UnresolvedHandlerInfoByObject;
-})(Em._e[209],Em._e[204],Em._e[203],Em._e[112]);
+})(Em._e[206],Em._e[201],Em._e[200],Em._e[112]);
 (function (exports, _routerHandlerInfo, _routerUtils) {
   'use strict';
 
@@ -35648,7 +35429,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = UnresolvedHandlerInfoByParam;
-})(Em._e[210],Em._e[204],Em._e[203]);
+})(Em._e[207],Em._e[201],Em._e[200]);
 (function (exports, _routerHandlerInfoResolvedHandlerInfo, _routerHandlerInfoUnresolvedHandlerInfoByObject, _routerHandlerInfoUnresolvedHandlerInfoByParam) {
   'use strict';
 
@@ -35666,7 +35447,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = handlerInfoFactory;
-})(Em._e[211],Em._e[208],Em._e[209],Em._e[210]);
+})(Em._e[208],Em._e[205],Em._e[206],Em._e[207]);
 (function (exports, _routerTransitionIntent, _routerTransitionState, _routerHandlerInfoFactory, _routerUtils) {
   'use strict';
 
@@ -35858,7 +35639,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       });
     }
   });
-})(Em._e[212],Em._e[207],Em._e[205],Em._e[211],Em._e[203]);
+})(Em._e[209],Em._e[204],Em._e[202],Em._e[208],Em._e[200]);
 (function (exports, _routerUtils) {
   "use strict";
 
@@ -35875,7 +35656,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   UnrecognizedURLError.prototype = _routerUtils.oCreate(Error.prototype);
 
   exports.default = UnrecognizedURLError;
-})(Em._e[213],Em._e[203]);
+})(Em._e[210],Em._e[200]);
 (function (exports, _routerTransitionIntent, _routerTransitionState, _routerHandlerInfoFactory, _routerUtils, _routerUnrecognizedUrlError) {
   'use strict';
 
@@ -35929,7 +35710,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return newState;
     }
   });
-})(Em._e[214],Em._e[207],Em._e[205],Em._e[211],Em._e[203],Em._e[213]);
+})(Em._e[211],Em._e[204],Em._e[202],Em._e[208],Em._e[200],Em._e[210]);
 (function (exports, _routeRecognizer, _rsvpPromise, _routerUtils, _routerTransitionState, _routerTransition, _routerTransitionIntentNamedTransitionIntent, _routerTransitionIntentUrlTransitionIntent, _routerHandlerInfo) {
   'use strict';
 
@@ -36734,12 +36515,12 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = Router;
-})(Em._e[215],Em._e[202],Em._e[112],Em._e[203],Em._e[205],Em._e[206],Em._e[212],Em._e[214],Em._e[204]);
+})(Em._e[212],Em._e[199],Em._e[112],Em._e[200],Em._e[202],Em._e[203],Em._e[209],Em._e[211],Em._e[201]);
 (function (exports, _routerRouter) {
   'use strict';
 
   exports.default = _routerRouter.default;
-})(Em._e[216],Em._e[215]);
+})(Em._e[213],Em._e[212]);
 (function (exports, _emberMetalLogger, _emberMetalDebug, _emberMetalError, _emberMetalProperty_get, _emberMetalProperty_set, _emberMetalProperties, _emberMetalEmpty_object, _emberMetalComputed, _emberMetalAssign, _emberMetalRun_loop, _emberRuntimeSystemObject, _emberRuntimeMixinsEvented, _emberRoutingSystemDsl, _emberRoutingLocationApi, _emberRoutingUtils, _emberMetalUtils, _emberRoutingSystemRouter_state, _containerOwner, _emberMetalDictionary, _router4, _routerTransition) {
   'use strict';
 
@@ -37927,7 +37708,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = EmberRouter;
-})(Em._e[217],Em._e[13],Em._e[1],Em._e[11],Em._e[15],Em._e[22],Em._e[20],Em._e[9],Em._e[32],Em._e[3],Em._e[44],Em._e[70],Em._e[94],Em._e[195],Em._e[188],Em._e[196],Em._e[7],Em._e[197],Em._e[65],Em._e[78],Em._e[216],Em._e[206]);
+})(Em._e[214],Em._e[13],Em._e[1],Em._e[11],Em._e[15],Em._e[22],Em._e[20],Em._e[9],Em._e[32],Em._e[3],Em._e[44],Em._e[70],Em._e[94],Em._e[195],Em._e[188],Em._e[196],Em._e[7],Em._e[197],Em._e[65],Em._e[78],Em._e[213],Em._e[203]);
 (function (exports, _emberMetalCore, _emberMetalDebug, _emberMetalFeatures, _emberMetalError, _emberMetalProperty_get, _emberMetalProperty_set, _emberMetalGet_properties, _emberMetalIs_none, _emberMetalComputed, _emberMetalAssign, _emberRuntimeUtils, _emberMetalRun_loop, _emberRuntimeCopy, _emberRuntimeSystemString, _emberRuntimeSystemObject, _emberRuntimeSystemNative_array, _emberRuntimeMixinsEvented, _emberRuntimeMixinsAction_handler, _emberRoutingSystemGenerate_controller, _emberRoutingUtils, _containerOwner, _emberMetalIs_empty) {
   'use strict';
 
@@ -39980,7 +39761,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = Route;
-})(Em._e[218],Em._e[2],Em._e[1],Em._e[4],Em._e[11],Em._e[15],Em._e[22],Em._e[24],Em._e[34],Em._e[32],Em._e[3],Em._e[71],Em._e[44],Em._e[76],Em._e[91],Em._e[70],Em._e[89],Em._e[94],Em._e[64],Em._e[193],Em._e[196],Em._e[65],Em._e[35]);
+})(Em._e[215],Em._e[2],Em._e[1],Em._e[4],Em._e[11],Em._e[15],Em._e[22],Em._e[24],Em._e[34],Em._e[32],Em._e[3],Em._e[71],Em._e[44],Em._e[76],Em._e[91],Em._e[70],Em._e[89],Em._e[94],Em._e[64],Em._e[193],Em._e[196],Em._e[65],Em._e[35]);
 (function (exports, _emberMetalCore, _emberRoutingExtRun_loop, _emberRoutingExtController, _emberRoutingLocationApi, _emberRoutingLocationNone_location, _emberRoutingLocationHash_location, _emberRoutingLocationHistory_location, _emberRoutingLocationAuto_location, _emberRoutingSystemGenerate_controller, _emberRoutingSystemController_for, _emberRoutingSystemDsl, _emberRoutingSystemRouter, _emberRoutingSystemRoute) {
   /**
   @module ember
@@ -40003,7 +39784,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   _emberMetalCore.default.Route = _emberRoutingSystemRoute.default;
 
   exports.default = _emberMetalCore.default;
-})(Em._e[219],Em._e[2],Em._e[185],Em._e[186],Em._e[188],Em._e[189],Em._e[190],Em._e[191],Em._e[192],Em._e[193],Em._e[194],Em._e[195],Em._e[217],Em._e[218]);
+})(Em._e[216],Em._e[2],Em._e[185],Em._e[186],Em._e[188],Em._e[189],Em._e[190],Em._e[191],Em._e[192],Em._e[193],Em._e[194],Em._e[195],Em._e[214],Em._e[215]);
 (function (exports, _emberMetalEmpty_object) {
   /**
   @module ember
@@ -40038,7 +39819,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = helpers;
-})(Em._e[220],Em._e[9]);
+})(Em._e[217],Em._e[9]);
 (function (exports, _emberMetalDebug) {
   /**
   @module ember
@@ -40073,7 +39854,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       _emberMetalDebug.assert('Expected ' + parsedName.fullName + ' to resolve to an ' + expectedType + ' but ' + ('instead it was ' + resolvedType + '.'), !!resolvedType[factoryFlag]);
     }
   }
-})(Em._e[221],Em._e[1]);
+})(Em._e[218],Em._e[1]);
 (function (exports) {
   // STATE within a module is frowned apon, this exists
   // to support Ember.TEMPLATES but shield ember internals from this legacy
@@ -40108,7 +39889,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function set(name, template) {
     return TEMPLATES[name] = template;
   }
-})(Em._e[222]);
+})(Em._e[219]);
 (function (exports, _emberMetalDebug, _emberMetalProperty_get, _emberRuntimeSystemString, _emberRuntimeSystemObject, _emberRuntimeSystemNamespace, _emberHtmlbarsHelpers, _emberApplicationUtilsValidateType, _emberMetalDictionary, _emberHtmlbarsTemplate_registry) {
   /**
   @module ember
@@ -40553,7 +40334,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return type + ':' + dasherizedName;
     }
   });
-})(Em._e[223],Em._e[1],Em._e[15],Em._e[91],Em._e[70],Em._e[77],Em._e[220],Em._e[221],Em._e[78],Em._e[222]);
+})(Em._e[220],Em._e[1],Em._e[15],Em._e[91],Em._e[70],Em._e[77],Em._e[217],Em._e[218],Em._e[78],Em._e[219]);
 (function (exports) {
   /* jshint scripturl:true */
 
@@ -40617,7 +40398,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return value;
   }
-})(Em._e[224]);
+})(Em._e[221]);
 (function (exports) {
   'use strict';
 
@@ -40701,7 +40482,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     var tag = ATTR_OVERRIDES[tagName.toUpperCase()];
     return tag && tag[propName.toLowerCase()] || false;
   }
-})(Em._e[225]);
+})(Em._e[222]);
 (function (exports) {
   /* global XMLSerializer:false */
   'use strict';
@@ -40959,7 +40740,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.buildHTMLDOM = buildHTMLDOM;
-})(Em._e[226]);
+})(Em._e[223]);
 (function (exports) {
   // Build out our basic SafeString type
   'use strict';
@@ -40973,12 +40754,12 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   };
 
   exports.default = SafeString;
-})(Em._e[227]);
+})(Em._e[224]);
 (function (exports, _htmlbarsUtilHandlebarsSafeString) {
   'use strict';
 
   exports.default = _htmlbarsUtilHandlebarsSafeString.default;
-})(Em._e[228],Em._e[227]);
+})(Em._e[225],Em._e[224]);
 (function (exports) {
   'use strict';
 
@@ -41094,7 +40875,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function appendContextPath(contextPath, id) {
     return (contextPath ? contextPath + '.' : '') + id;
   }
-})(Em._e[229]);
+})(Em._e[226]);
 (function (exports) {
   // ref http://dev.w3.org/html5/spec-LC/namespaces.html
   'use strict';
@@ -41123,7 +40904,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return namespace || null;
   }
-})(Em._e[230]);
+})(Em._e[227]);
 (function (exports, _htmlbarsUtilSafeString, _htmlbarsUtilHandlebarsUtils, _htmlbarsUtilNamespaces, _htmlbarsUtilMorphUtils) {
   'use strict';
 
@@ -41133,7 +40914,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   exports.validateChildMorphs = _htmlbarsUtilMorphUtils.validateChildMorphs;
   exports.linkParams = _htmlbarsUtilMorphUtils.linkParams;
   exports.dump = _htmlbarsUtilMorphUtils.dump;
-})(Em._e[231],Em._e[228],Em._e[229],Em._e[230],Em._e[136]);
+})(Em._e[228],Em._e[225],Em._e[226],Em._e[227],Em._e[136]);
 (function (exports, _morphAttrSanitizeAttributeValue, _domHelperProp, _domHelperBuildHtmlDom, _htmlbarsUtil) {
   "use strict";
 
@@ -41311,7 +41092,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
   exports.default = AttrMorph;
   exports.sanitizeAttributeValue = _morphAttrSanitizeAttributeValue.sanitizeAttributeValue;
-})(Em._e[232],Em._e[224],Em._e[225],Em._e[226],Em._e[231]);
+})(Em._e[229],Em._e[221],Em._e[222],Em._e[223],Em._e[228]);
 (function (exports) {
   'use strict';
 
@@ -41428,7 +41209,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
   exports.addClasses = addClasses;
   exports.removeClasses = removeClasses;
-})(Em._e[233]);
+})(Em._e[230]);
 (function (exports, _htmlbarsRuntimeMorph, _morphAttr, _domHelperBuildHtmlDom, _domHelperClasses, _domHelperProp) {
   /*globals module, URL*/
 
@@ -42036,7 +41817,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = DOMHelper;
-})(Em._e[234],Em._e[141],Em._e[232],Em._e[226],Em._e[233],Em._e[225]);
+})(Em._e[231],Em._e[141],Em._e[229],Em._e[223],Em._e[230],Em._e[222]);
 (function (exports, _domHelper, _emberMetalDebug) {
   'use strict';
 
@@ -42099,7 +41880,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   };
 
   exports.default = EmberMorph;
-})(Em._e[235],Em._e[234],Em._e[1]);
+})(Em._e[232],Em._e[231],Em._e[1]);
 (function (exports, _emberMetalDebug, _domHelper, _emberMetalIs_none) {
   'use strict';
 
@@ -42136,7 +41917,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   };
 
   exports.default = HTMLBarsAttrMorph;
-})(Em._e[236],Em._e[1],Em._e[234],Em._e[34]);
+})(Em._e[233],Em._e[1],Em._e[231],Em._e[34]);
 (function (exports, _domHelper, _emberHtmlbarsMorphsMorph, _emberHtmlbarsMorphsAttrMorph) {
   'use strict';
 
@@ -42149,7 +41930,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   proto.AttrMorphClass = _emberHtmlbarsMorphsAttrMorph.default;
 
   exports.default = EmberDOMHelper;
-})(Em._e[237],Em._e[234],Em._e[235],Em._e[236]);
+})(Em._e[234],Em._e[231],Em._e[232],Em._e[233]);
 (function (exports, _emberMetalFeatures, _require2) {
   'use strict';
 
@@ -42184,7 +41965,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     return templateSpec;
   };
   exports.default = template;
-})(Em._e[238],Em._e[4],Em.__loader.require);
+})(Em._e[235],Em._e[4],Em.__loader.require);
 (function (exports, _emberTemplateCompilerSystemTemplate) {
   "use strict";
 
@@ -42213,7 +41994,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       templates: []
     };
   })());
-})(Em._e[239],Em._e[238]);
+})(Em._e[236],Em._e[235]);
 (function (exports, _emberViewsViewsView, _emberHtmlbarsTemplatesTopLevelView) {
   /**
   @module ember
@@ -42256,7 +42037,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   exports.CoreOutletView = CoreOutletView;
   var OutletView = CoreOutletView.extend({ tagName: '' });
   exports.OutletView = OutletView;
-})(Em._e[240],Em._e[173],Em._e[239]);
+})(Em._e[237],Em._e[173],Em._e[236]);
 (function (exports, _emberRuntimeSystemObject) {
   'use strict';
 
@@ -42288,7 +42069,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     },
     cache: null
   });
-})(Em._e[241],Em._e[70]);
+})(Em._e[238],Em._e[70]);
 (function (exports, _emberRuntimeSystemObject, _containerRegistry, _emberRuntimeMixinsContainer_proxy, _emberRuntimeMixinsRegistry_proxy, _emberMetalRun_loop) {
   /**
   @module ember
@@ -42360,7 +42141,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = EngineInstance;
-})(Em._e[242],Em._e[70],Em._e[81],Em._e[79],Em._e[131],Em._e[44]);
+})(Em._e[239],Em._e[70],Em._e[81],Em._e[79],Em._e[131],Em._e[44]);
 (function (exports, _emberMetalDebug, _emberMetalProperty_get, _emberMetalProperty_set, _emberMetalSymbol, _emberMetalRun_loop, _emberMetalComputed, _emberRuntimeMixinsRegistry_proxy, _emberMetalAssign, _emberMetalEnvironment, _emberRuntimeExtRsvp, _emberViewsSystemJquery, _emberApplicationSystemEngineInstance) {
   /**
   @module ember
@@ -42861,7 +42642,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = ApplicationInstance;
-})(Em._e[243],Em._e[1],Em._e[15],Em._e[22],Em._e[18],Em._e[44],Em._e[32],Em._e[131],Em._e[3],Em._e[54],Em._e[128],Em._e[133],Em._e[242]);
+})(Em._e[240],Em._e[1],Em._e[15],Em._e[22],Em._e[18],Em._e[44],Em._e[32],Em._e[131],Em._e[3],Em._e[54],Em._e[128],Em._e[133],Em._e[239]);
 (function (exports, _emberRuntimeSystemObject, _emberMetalStreamsStream) {
   'use strict';
 
@@ -42893,7 +42674,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   ProxyStream.extend = _emberMetalStreamsStream.default.extend;
 
   exports.default = ProxyStream;
-})(Em._e[244],Em._e[70],Em._e[48]);
+})(Em._e[241],Em._e[70],Em._e[48]);
 (function (exports, _emberHtmlbarsHooksGetValue) {
   'use strict';
 
@@ -42923,7 +42704,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return out;
   }
-})(Em._e[245],Em._e[151]);
+})(Em._e[242],Em._e[151]);
 (function (exports, _emberMetalStreamsStream, _emberHtmlbarsStreamsUtils) {
   'use strict';
 
@@ -42942,7 +42723,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = HelperInstanceStream;
-})(Em._e[246],Em._e[48],Em._e[245]);
+})(Em._e[243],Em._e[48],Em._e[242]);
 (function (exports, _emberMetalStreamsStream, _emberHtmlbarsStreamsUtils) {
   'use strict';
 
@@ -42974,7 +42755,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = HelperFactoryStream;
-})(Em._e[247],Em._e[48],Em._e[245]);
+})(Em._e[244],Em._e[48],Em._e[242]);
 (function (exports, _emberMetalStreamsStream, _emberHtmlbarsStreamsUtils) {
   'use strict';
 
@@ -42995,7 +42776,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = BuiltInHelperStream;
-})(Em._e[248],Em._e[48],Em._e[245]);
+})(Em._e[245],Em._e[48],Em._e[242]);
 (function (exports, _emberMetalDebug, _emberHtmlbarsStreamsHelperInstance, _emberHtmlbarsStreamsHelperFactory, _emberHtmlbarsStreamsBuiltInHelper) {
   'use strict';
 
@@ -43014,7 +42795,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return new _emberHtmlbarsStreamsBuiltInHelper.default(helper, params, hash, templates, env, scope, label);
     }
   }
-})(Em._e[249],Em._e[1],Em._e[246],Em._e[247],Em._e[248]);
+})(Em._e[246],Em._e[1],Em._e[243],Em._e[244],Em._e[245]);
 (function (exports, _emberMetalStreamsUtils) {
   'use strict';
 
@@ -43046,7 +42827,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       node.ownerNode.emberView.scheduleRevalidate(node, _emberMetalStreamsUtils.labelFor(stream));
     }));
   }
-})(Em._e[250],Em._e[49]);
+})(Em._e[247],Em._e[49]);
 (function (exports, _emberMetalDebug, _emberMetalStreamsStream, _emberMetalStreamsUtils) {
   'use strict';
 
@@ -43109,7 +42890,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       paramsStream.addDependency(param);
     }
   }
-})(Em._e[251],Em._e[1],Em._e[48],Em._e[49]);
+})(Em._e[248],Em._e[1],Em._e[48],Em._e[49]);
 (function (exports, _emberMetalFeatures) {
   'use strict';
 
@@ -43137,7 +42918,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return lookupComponentPair(componentLookup, owner, name);
   }
-})(Em._e[252],Em._e[4]);
+})(Em._e[249],Em._e[4]);
 (function (exports, _emberMetalDebug, _emberMetalIs_none, _emberMetalSymbol, _emberMetalStreamsStream, _emberMetalEmpty_object, _emberMetalStreamsUtils, _emberHtmlbarsHooksSubexpr, _emberMetalAssign, _emberHtmlbarsUtilsExtractPositionalParams, _emberHtmlbarsUtilsLookupComponent) {
   /**
   @module ember
@@ -43270,7 +43051,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function mergeInNewHash(original, updates) {
     return _emberMetalAssign.default({}, original, updates);
   }
-})(Em._e[253],Em._e[1],Em._e[34],Em._e[18],Em._e[48],Em._e[9],Em._e[49],Em._e[255],Em._e[3],Em._e[251],Em._e[252]);
+})(Em._e[250],Em._e[1],Em._e[34],Em._e[18],Em._e[48],Em._e[9],Em._e[49],Em._e[252],Em._e[3],Em._e[248],Em._e[249]);
 (function (exports, _emberHtmlbarsUtilsSubscribe, _emberRuntimeUtils, _emberMetalStreamsUtils, _emberHtmlbarsSystemLookupHelper, _emberHtmlbarsKeywordsClosureComponent) {
   /**
   @module ember
@@ -43395,7 +43176,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return obj && obj[key];
     }
   }
-})(Em._e[254],Em._e[250],Em._e[71],Em._e[49],Em._e[178],Em._e[253]);
+})(Em._e[251],Em._e[247],Em._e[71],Em._e[49],Em._e[178],Em._e[250]);
 (function (exports, _emberHtmlbarsSystemLookupHelper, _emberHtmlbarsSystemInvokeHelper, _emberMetalStreamsUtils, _emberHtmlbarsHooksLinkRenderNode) {
   /**
   @module ember
@@ -43461,7 +43242,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return out.join(' ');
   }
-})(Em._e[255],Em._e[178],Em._e[249],Em._e[49],Em._e[254]);
+})(Em._e[252],Em._e[178],Em._e[246],Em._e[49],Em._e[251]);
 (function (exports, _emberMetalStreamsStream, _emberMetalStreamsUtils, _emberMetalSymbol, _emberMetalProperty_get, _emberHtmlbarsHooksSubexpr, _emberMetalError, _emberMetalRun_loop, _emberMetalInstrumentation, _emberMetalIs_none) {
   'use strict';
 
@@ -43582,7 +43363,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return closureAction;
   }
-})(Em._e[256],Em._e[48],Em._e[49],Em._e[18],Em._e[15],Em._e[255],Em._e[11],Em._e[44],Em._e[6],Em._e[34]);
+})(Em._e[253],Em._e[48],Em._e[49],Em._e[18],Em._e[15],Em._e[252],Em._e[11],Em._e[44],Em._e[6],Em._e[34]);
 (function (exports, _emberMetalDebug, _emberMetalSymbol, _emberMetalStreamsProxyStream, _emberMetalStreamsStream, _emberMetalStreamsUtils, _emberViewsCompatAttrsProxy, _emberRoutingHtmlbarsKeywordsClosureAction) {
   /**
   @module ember
@@ -43734,7 +43515,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return new MutStream(stream);
   }
-})(Em._e[257],Em._e[1],Em._e[18],Em._e[244],Em._e[48],Em._e[49],Em._e[150],Em._e[256]);
+})(Em._e[254],Em._e[1],Em._e[18],Em._e[241],Em._e[48],Em._e[49],Em._e[150],Em._e[253]);
 (function (exports, _emberMetalStreamsUtils, _emberHtmlbarsKeywordsMut) {
   'use strict';
 
@@ -43749,7 +43530,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     // Get the value out of the reference.
     return _emberMetalStreamsUtils.read(ref);
   }
-})(Em._e[258],Em._e[49],Em._e[257]);
+})(Em._e[255],Em._e[49],Em._e[254]);
 (function (exports, _emberMetalInstrumentation) {
   'use strict';
 
@@ -43793,7 +43574,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return callback.call(context);
     }
   }
-})(Em._e[259],Em._e[6]);
+})(Em._e[256],Em._e[6]);
 (function (exports, _emberViewsViewsCore_view, _emberViewsMixinsView_child_views_support, _emberViewsMixinsView_state_support, _emberViewsMixinsTemplate_rendering_support, _emberViewsMixinsClass_names_support, _emberViewsMixinsInstrumentation_support, _emberViewsMixinsAria_role_support, _emberViewsMixinsView_support, _emberViewsViewsView) {
   'use strict';
 
@@ -43806,7 +43587,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       this._viewRegistry = this._viewRegistry || _emberViewsViewsView.default.views;
     }
   });
-})(Em._e[260],Em._e[161],Em._e[164],Em._e[166],Em._e[167],Em._e[168],Em._e[169],Em._e[170],Em._e[172],Em._e[173]);
+})(Em._e[257],Em._e[161],Em._e[164],Em._e[166],Em._e[167],Em._e[168],Em._e[169],Em._e[170],Em._e[172],Em._e[173]);
 (function (exports, _emberMetalDebug, _emberViewsSystemBuildComponentTemplate, _emberHtmlbarsHooksGetCellOrValue, _emberMetalProperty_get, _emberMetalProperty_set, _emberViewsCompatAttrsProxy, _emberHtmlbarsSystemInstrumentationSupport, _emberViewsComponentsComponent, _emberHtmlbarsGlimmerComponent, _emberHtmlbarsUtilsExtractPositionalParams, _emberMetalSymbol, _containerOwner, _emberHtmlbarsHooksGetValue) {
   'use strict';
 
@@ -44116,7 +43897,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function buildChildEnv(state, env) {
     return env.childWithView(this.emberView);
   }
-})(Em._e[261],Em._e[1],Em._e[152],Em._e[258],Em._e[15],Em._e[22],Em._e[150],Em._e[259],Em._e[174],Em._e[260],Em._e[251],Em._e[18],Em._e[65],Em._e[151]);
+})(Em._e[258],Em._e[1],Em._e[152],Em._e[255],Em._e[15],Em._e[22],Em._e[150],Em._e[256],Em._e[174],Em._e[257],Em._e[248],Em._e[18],Em._e[65],Em._e[151]);
 (function (exports, _emberTemplateCompilerSystemTemplate) {
   "use strict";
 
@@ -44195,7 +43976,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       templates: [child0, child1]
     };
   })());
-})(Em._e[262],Em._e[238]);
+})(Em._e[259],Em._e[235]);
 (function (exports, _emberMetalFeatures, _emberMetalLogger, _emberMetalDebug, _emberMetalProperty_get, _emberMetalComputed, _emberMetalComputed_macros, _emberViewsSystemUtils, _emberViewsComponentsComponent, _emberRuntimeInject, _emberRuntimeSystemService, _emberRuntimeMixinsController, _emberHtmlbarsNodeManagersComponentNodeManager, _emberHtmlbarsTemplatesLinkTo, _require) {
   /**
   @module ember
@@ -44992,7 +44773,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = LinkComponent;
-})(Em._e[263],Em._e[4],Em._e[13],Em._e[1],Em._e[15],Em._e[32],Em._e[36],Em._e[134],Em._e[174],Em._e[67],Em._e[101],Em._e[99],Em._e[261],Em._e[262],Em.__loader.require);
+})(Em._e[260],Em._e[4],Em._e[13],Em._e[1],Em._e[15],Em._e[32],Em._e[36],Em._e[134],Em._e[174],Em._e[67],Em._e[101],Em._e[99],Em._e[258],Em._e[259],Em.__loader.require);
 (function (exports, _emberRuntimeSystemService, _emberMetalProperty_get, _emberMetalComputed_macros, _emberRoutingUtils, _emberMetalAssign) {
   /**
   @module ember
@@ -45094,7 +44875,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return req;
   }
-})(Em._e[264],Em._e[101],Em._e[15],Em._e[36],Em._e[196],Em._e[3]);
+})(Em._e[261],Em._e[101],Em._e[15],Em._e[36],Em._e[196],Em._e[3]);
 (function (exports, _emberMetalCore, _emberRuntimeSystemNative_array, _emberRuntimeUtils, _emberRuntimeSystemString, _emberRuntimeSystemNamespace, _emberRuntimeSystemObject) {
   'use strict';
 
@@ -45195,7 +44976,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return types;
     }
   });
-})(Em._e[265],Em._e[2],Em._e[89],Em._e[71],Em._e[91],Em._e[77],Em._e[70]);
+})(Em._e[262],Em._e[2],Em._e[89],Em._e[71],Em._e[91],Em._e[77],Em._e[70]);
 (function (exports) {
   /**
    * DAG Vertex
@@ -45215,7 +44996,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     this.hasOutgoing = false;
     this.value = null;
   }
-})(Em._e[266]);
+})(Em._e[263]);
 (function (exports) {
   "use strict";
 
@@ -45245,7 +45026,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     fn(vertex, path);
     path.pop();
   }
-})(Em._e[267]);
+})(Em._e[264]);
 (function (exports, _vertex, _visit) {
   'use strict';
 
@@ -45388,7 +45169,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       }
     }
   };
-})(Em._e[268],Em._e[266],Em._e[267]);
+})(Em._e[265],Em._e[263],Em._e[264]);
 (function (exports, _emberRuntimeSystemNamespace, _containerRegistry, _emberRuntimeMixinsRegistry_proxy, _dagMap, _emberMetalProperty_get, _emberMetalProperty_set, _emberMetalDebug, _emberMetalUtils, _emberMetalEmpty_object, _emberApplicationSystemResolver, _emberApplicationSystemEngineInstance, _emberMetalFeatures, _emberMetalSymbol) {
   /**
   @module ember
@@ -45780,7 +45561,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = Engine;
-})(Em._e[269],Em._e[77],Em._e[81],Em._e[131],Em._e[268],Em._e[15],Em._e[22],Em._e[1],Em._e[7],Em._e[9],Em._e[223],Em._e[242],Em._e[4],Em._e[18]);
+})(Em._e[266],Em._e[77],Em._e[81],Em._e[131],Em._e[265],Em._e[15],Em._e[22],Em._e[1],Em._e[7],Em._e[9],Em._e[220],Em._e[239],Em._e[4],Em._e[18]);
 (function (exports, _emberMetal, _emberMetalDebug, _emberMetalProperty_get, _emberRuntimeSystemLazy_load, _emberMetalRun_loop, _emberRuntimeControllersController, _emberHtmlbarsSystemDomHelper, _emberMetalViews, _emberHtmlbarsTemplatesTopLevelView, _emberRoutingViewsViewsOutlet, _emberViewsViewsView, _emberViewsSystemEvent_dispatcher, _emberViewsSystemJquery, _emberRoutingSystemRoute, _emberRoutingSystemRouter, _emberRoutingLocationHash_location, _emberRoutingLocationHistory_location, _emberRoutingLocationAuto_location, _emberRoutingLocationNone_location, _emberRoutingSystemCache, _emberApplicationSystemApplicationInstance, _emberViewsViewsText_field, _emberViewsViewsText_area, _emberViewsViewsCheckbox, _emberRoutingViewsComponentsLinkTo, _emberRoutingServicesRouting, _emberExtensionSupportContainer_debug_adapter, _emberRuntimeMixinsRegistry_proxy, _containerRegistry, _emberMetalEnvironment, _emberRuntimeExtRsvp, _emberApplicationSystemEngine, _require2) {
   /**
   @module ember
@@ -45909,9 +45690,8 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     not receive events.* If you specify a custom root element, make sure you only
     append views inside it!
   
-    To learn more about the advantages of event delegation and the Ember view
-    layer, and a list of the event listeners that are setup by default, visit the
-    [Ember View Layer guide](http://emberjs.com/guides/understanding-ember/the-view-layer/#toc_event-delegation).
+    To learn more about the events Ember components use, see
+    [components/handling-events](https://guides.emberjs.com/v2.6.0/components/handling-events/#toc_event-names).
   
     ### Initializers
   
@@ -46856,7 +46636,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = Application;
-})(Em._e[270],Em._e[59],Em._e[1],Em._e[15],Em._e[92],Em._e[44],Em._e[100],Em._e[237],Em._e[154],Em._e[239],Em._e[240],Em._e[173],Em._e[176],Em._e[133],Em._e[218],Em._e[217],Em._e[190],Em._e[191],Em._e[192],Em._e[189],Em._e[241],Em._e[243],Em._e[182],Em._e[183],Em._e[180],Em._e[263],Em._e[264],Em._e[265],Em._e[131],Em._e[81],Em._e[54],Em._e[128],Em._e[269],Em.__loader.require);
+})(Em._e[267],Em._e[59],Em._e[1],Em._e[15],Em._e[92],Em._e[44],Em._e[100],Em._e[234],Em._e[154],Em._e[236],Em._e[237],Em._e[173],Em._e[176],Em._e[133],Em._e[215],Em._e[214],Em._e[190],Em._e[191],Em._e[192],Em._e[189],Em._e[238],Em._e[240],Em._e[182],Em._e[183],Em._e[180],Em._e[260],Em._e[261],Em._e[262],Em._e[131],Em._e[81],Em._e[54],Em._e[128],Em._e[266],Em.__loader.require);
 (function (exports, _emberMetalCore, _emberMetalFeatures, _emberRuntimeSystemLazy_load, _emberApplicationSystemResolver, _emberApplicationSystemApplication, _emberApplicationSystemApplicationInstance, _emberApplicationSystemEngine, _emberApplicationSystemEngineInstance) {
   'use strict';
 
@@ -46865,7 +46645,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   _emberMetalCore.default.DefaultResolver = _emberApplicationSystemResolver.default;
 
   _emberRuntimeSystemLazy_load.runLoadHooks('Ember.Application', _emberApplicationSystemApplication.default);
-})(Em._e[271],Em._e[2],Em._e[4],Em._e[92],Em._e[223],Em._e[270],Em._e[243],Em._e[269],Em._e[242]);
+})(Em._e[268],Em._e[2],Em._e[4],Em._e[92],Em._e[220],Em._e[267],Em._e[240],Em._e[266],Em._e[239]);
 (function (exports, _emberMetalProperty_get, _emberMetalRun_loop, _emberRuntimeSystemString, _emberRuntimeSystemNamespace, _emberRuntimeSystemObject, _emberRuntimeSystemNative_array, _emberApplicationSystemApplication, _containerOwner, _emberRuntimeMixinsArray) {
   'use strict';
 
@@ -47346,7 +47126,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return function () {};
     }
   });
-})(Em._e[272],Em._e[15],Em._e[44],Em._e[91],Em._e[77],Em._e[70],Em._e[89],Em._e[270],Em._e[65],Em._e[63]);
+})(Em._e[269],Em._e[15],Em._e[44],Em._e[91],Em._e[77],Em._e[70],Em._e[89],Em._e[267],Em._e[65],Em._e[63]);
 (function (exports, _emberMetalCore, _emberExtensionSupportData_adapter, _emberExtensionSupportContainer_debug_adapter) {
   /**
   @module ember
@@ -47357,7 +47137,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
   _emberMetalCore.default.DataAdapter = _emberExtensionSupportData_adapter.default;
   _emberMetalCore.default.ContainerDebugAdapter = _emberExtensionSupportContainer_debug_adapter.default;
-})(Em._e[273],Em._e[2],Em._e[272],Em._e[265]);
+})(Em._e[270],Em._e[2],Em._e[269],Em._e[262]);
 (function (exports) {
   /**
   @module ember
@@ -47391,7 +47171,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = plugins;
-})(Em._e[274]);
+})(Em._e[271]);
 (function (exports, _emberMetalAssign, _emberTemplateCompilerPlugins) {
   /**
   @module ember
@@ -47434,7 +47214,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     options.buildMeta = function buildMeta(program) {
       return {
         fragmentReason: fragmentReason(program),
-        revision: 'Ember@2.6.0',
+        revision: 'Ember@2.6.1',
         loc: program.loc,
         moduleName: options.moduleName
       };
@@ -47501,7 +47281,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   };
 
   exports.default = compileOptions;
-})(Em._e[275],Em._e[3],Em._e[274]);
+})(Em._e[272],Em._e[3],Em._e[271]);
 (function (exports, _emberMetalFeatures, _require, _emberTemplateCompilerSystemCompile_options) {
   /**
   @module ember
@@ -47534,7 +47314,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return compileSpec(templateString, _emberTemplateCompilerSystemCompile_options.default(options));
   };
-})(Em._e[276],Em._e[4],Em.__loader.require,Em._e[275]);
+})(Em._e[273],Em._e[4],Em.__loader.require,Em._e[272]);
 (function (exports, _emberMetalFeatures, _require, _emberTemplateCompilerSystemCompile_options, _emberTemplateCompilerSystemTemplate) {
   /**
   @module ember
@@ -47569,7 +47349,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return _emberTemplateCompilerSystemTemplate.default(templateSpec);
   };
-})(Em._e[277],Em._e[4],Em.__loader.require,Em._e[275],Em._e[238]);
+})(Em._e[274],Em._e[4],Em.__loader.require,Em._e[272],Em._e[235]);
 (function (exports) {
   'use strict';
 
@@ -47602,7 +47382,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return moduleInfo;
   }
-})(Em._e[278]);
+})(Em._e[275]);
 (function (exports, _emberMetalDebug, _emberTemplateCompilerSystemCalculateLocationDisplay) {
   'use strict';
 
@@ -47669,7 +47449,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
         return expr.original;
     }
   }
-})(Em._e[279],Em._e[1],Em._e[278]);
+})(Em._e[276],Em._e[1],Em._e[275]);
 (function (exports) {
   'use strict';
 
@@ -47809,7 +47589,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return segments;
   }
-})(Em._e[280]);
+})(Em._e[277]);
 (function (exports) {
   'use strict';
 
@@ -47862,7 +47642,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       callback(list[i]);
     }
   }
-})(Em._e[281]);
+})(Em._e[278]);
 (function (exports) {
   'use strict';
 
@@ -47917,7 +47697,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = TransformClosureComponentAttrsIntoMut;
-})(Em._e[282]);
+})(Em._e[279]);
 (function (exports) {
   'use strict';
 
@@ -47963,7 +47743,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = TransformComponentAttrsIntoMut;
-})(Em._e[283]);
+})(Em._e[280]);
 (function (exports) {
   'use strict';
 
@@ -48012,7 +47792,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = TransformComponentCurlyToReadonly;
-})(Em._e[284]);
+})(Em._e[281]);
 (function (exports) {
   'use strict';
 
@@ -48045,7 +47825,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = TransformAngleBracketComponents;
-})(Em._e[285]);
+})(Em._e[282]);
 (function (exports, _emberMetalDebug, _emberTemplateCompilerSystemCalculateLocationDisplay) {
   'use strict';
 
@@ -48165,7 +47945,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = TransformInputOnToOnEvent;
-})(Em._e[286],Em._e[1],Em._e[278]);
+})(Em._e[283],Em._e[1],Em._e[275]);
 (function (exports) {
   'use strict';
 
@@ -48247,7 +48027,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = TransformTopLevelComponents;
-})(Em._e[287]);
+})(Em._e[284]);
 (function (exports, _emberMetalDebug, _emberTemplateCompilerSystemCalculateLocationDisplay) {
   'use strict';
 
@@ -48302,7 +48082,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return 'Please refactor `' + original + '` to a component and invoke via' + (' `' + preferred + '`. ' + sourceInformation);
   }
-})(Em._e[288],Em._e[1],Em._e[278]);
+})(Em._e[285],Em._e[1],Em._e[275]);
 (function (exports, _emberMetalError, _emberTemplateCompilerSystemCalculateLocationDisplay) {
   'use strict';
 
@@ -48337,7 +48117,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return 'Usage of `render` in block form is unsupported ' + sourceInformation + '.';
   }
-})(Em._e[289],Em._e[11],Em._e[278]);
+})(Em._e[286],Em._e[11],Em._e[275]);
 (function (exports) {
   'use strict';
 
@@ -48386,7 +48166,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return ast;
   };
-})(Em._e[290]);
+})(Em._e[287]);
 (function (exports, _emberMetalCore, _emberMetalDebug, _emberTemplateCompilerSystemCalculateLocationDisplay) {
   'use strict';
 
@@ -48465,7 +48245,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = AssertNoViewAndControllerPaths;
-})(Em._e[291],Em._e[2],Em._e[1],Em._e[278]);
+})(Em._e[288],Em._e[2],Em._e[1],Em._e[275]);
 (function (exports, _emberMetalCore, _emberMetalDebug, _emberTemplateCompilerSystemCalculateLocationDisplay) {
   'use strict';
 
@@ -48515,7 +48295,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = AssertNoViewHelper;
-})(Em._e[292],Em._e[2],Em._e[1],Em._e[278]);
+})(Em._e[289],Em._e[2],Em._e[1],Em._e[275]);
 (function (exports, _emberMetalCore, _emberMetalDebug, _emberTemplateCompilerSystemCalculateLocationDisplay) {
   'use strict';
 
@@ -48556,7 +48336,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = AssertNoEachIn;
-})(Em._e[293],Em._e[2],Em._e[1],Em._e[278]);
+})(Em._e[290],Em._e[2],Em._e[1],Em._e[275]);
 (function (exports, _require, _emberTemplateCompilerSystemCompile_options) {
   /**
   @module ember
@@ -48583,7 +48363,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return compileFunc(string, _emberTemplateCompilerSystemCompile_options.default());
   };
-})(Em._e[294],Em.__loader.require,Em._e[275]);
+})(Em._e[291],Em.__loader.require,Em._e[272]);
 (function (exports, _emberMetalCore, _emberTemplateCompilerCompatPrecompile, _emberTemplateCompilerSystemCompile, _emberTemplateCompilerSystemTemplate) {
   'use strict';
 
@@ -48592,7 +48372,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   EmberHandlebars.precompile = _emberTemplateCompilerCompatPrecompile.default;
   EmberHandlebars.compile = _emberTemplateCompilerSystemCompile.default;
   EmberHandlebars.template = _emberTemplateCompilerSystemTemplate.default;
-})(Em._e[295],Em._e[2],Em._e[294],Em._e[277],Em._e[238]);
+})(Em._e[292],Em._e[2],Em._e[291],Em._e[274],Em._e[235]);
 (function (exports, _emberMetal, _emberTemplateCompilerSystemPrecompile, _emberTemplateCompilerSystemCompile, _emberTemplateCompilerSystemTemplate, _emberTemplateCompilerPlugins, _emberTemplateCompilerPluginsTransformOldBindingSyntax, _emberTemplateCompilerPluginsTransformOldClassBindingSyntax, _emberTemplateCompilerPluginsTransformItemClass, _emberTemplateCompilerPluginsTransformClosureComponentAttrsIntoMut, _emberTemplateCompilerPluginsTransformComponentAttrsIntoMut, _emberTemplateCompilerPluginsTransformComponentCurlyToReadonly, _emberTemplateCompilerPluginsTransformAngleBracketComponents, _emberTemplateCompilerPluginsTransformInputOnToOnEvent, _emberTemplateCompilerPluginsTransformTopLevelComponents, _emberTemplateCompilerPluginsDeprecateRenderModel, _emberTemplateCompilerPluginsPreventRenderBlock, _emberTemplateCompilerPluginsTransformInlineLinkTo, _emberTemplateCompilerPluginsAssertNoViewAndControllerPaths, _emberTemplateCompilerPluginsAssertNoViewHelper, _emberTemplateCompilerPluginsAssertNoEachIn, _emberTemplateCompilerCompat) {
   'use strict';
 
@@ -48620,7 +48400,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   exports.compile = _emberTemplateCompilerSystemCompile.default;
   exports.template = _emberTemplateCompilerSystemTemplate.default;
   exports.registerPlugin = _emberTemplateCompilerPlugins.registerPlugin;
-})(Em._e[296],Em._e[59],Em._e[276],Em._e[277],Em._e[238],Em._e[274],Em._e[279],Em._e[280],Em._e[281],Em._e[282],Em._e[283],Em._e[284],Em._e[285],Em._e[286],Em._e[287],Em._e[288],Em._e[289],Em._e[290],Em._e[291],Em._e[292],Em._e[293],Em._e[295]);
+})(Em._e[293],Em._e[59],Em._e[273],Em._e[274],Em._e[235],Em._e[271],Em._e[276],Em._e[277],Em._e[278],Em._e[279],Em._e[280],Em._e[281],Em._e[282],Em._e[283],Em._e[284],Em._e[285],Em._e[286],Em._e[287],Em._e[288],Em._e[289],Em._e[290],Em._e[292]);
 (function (exports, _emberRuntimeSystemObject) {
   /**
   @module ember
@@ -48742,7 +48522,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = Helper;
-})(Em._e[297],Em._e[70]);
+})(Em._e[294],Em._e[70]);
 (function (exports, _emberMetalDebug, _emberHtmlbarsHelper) {
   /**
   @module ember
@@ -48800,7 +48580,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     _emberMetalDebug.deprecate('Using `Ember.HTMLBars.makeBoundHelper` is deprecated. Please refactor to use `Ember.Helper` or `Ember.Helper.helper`.', false, { id: 'ember-htmlbars.make-bound-helper', until: '3.0.0' });
     return _emberHtmlbarsHelper.helper(fn);
   }
-})(Em._e[298],Em._e[1],Em._e[297]);
+})(Em._e[295],Em._e[1],Em._e[294]);
 (function (exports, _emberMetalDebug, _emberMetalProperty_get, _emberRuntimeUtils, _emberMetalStreamsStream, _emberMetalStreamsUtils) {
   'use strict';
 
@@ -48873,7 +48653,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return !!predicate;
     }
   }
-})(Em._e[299],Em._e[1],Em._e[15],Em._e[71],Em._e[48],Em._e[49]);
+})(Em._e[296],Em._e[1],Em._e[15],Em._e[71],Em._e[48],Em._e[49]);
 (function (exports, _emberMetalDebug, _emberViewsStreamsShould_display) {
   /**
   @module ember
@@ -48977,7 +48757,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
   exports.ifHelper = ifHelper;
   exports.unlessHelper = unlessHelper;
-})(Em._e[300],Em._e[1],Em._e[299]);
+})(Em._e[297],Em._e[1],Em._e[296]);
 (function (exports, _emberViewsStreamsShould_display) {
   /**
   @module ember
@@ -49028,7 +48808,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       options.inverse.yield([]);
     }
   }
-})(Em._e[301],Em._e[299]);
+})(Em._e[298],Em._e[296]);
 (function (exports, _emberHtmlbarsHelper, _emberRuntimeSystemString) {
   'use strict';
 
@@ -49074,7 +48854,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = _emberHtmlbarsHelper.helper(locHelper);
-})(Em._e[302],Em._e[297],Em._e[91]);
+})(Em._e[299],Em._e[294],Em._e[91]);
 (function (exports, _emberMetalLogger) {
   /**
   @module ember
@@ -49102,7 +48882,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function logHelper(values) {
     _emberMetalLogger.default.log.apply(null, values);
   }
-})(Em._e[303],Em._e[13]);
+})(Em._e[300],Em._e[13]);
 (function (exports, _emberMetalProperty_get, _emberMetalUtils) {
   'use strict';
 
@@ -49145,7 +48925,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return key;
   }
-})(Em._e[304],Em._e[15],Em._e[7]);
+})(Em._e[301],Em._e[15],Em._e[7]);
 (function (exports, _emberViewsStreamsShould_display, _emberHtmlbarsUtilsDecodeEachKey) {
   /**
   @module ember
@@ -49252,7 +49032,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function forEach(iterable, cb) {
     return iterable.forEach ? iterable.forEach(cb) : Array.prototype.forEach.call(iterable, cb);
   }
-})(Em._e[305],Em._e[299],Em._e[304]);
+})(Em._e[302],Em._e[296],Em._e[301]);
 (function (exports, _emberViewsStreamsShould_display) {
   /**
   @module ember
@@ -49309,7 +49089,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   };
 
   exports.default = eachInHelper;
-})(Em._e[306],Em._e[299]);
+})(Em._e[303],Em._e[296]);
 (function (exports, _emberRuntimeSystemString, _emberMetalPath_cache) {
   'use strict';
 
@@ -49362,7 +49142,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
             return null;
           }
   }
-})(Em._e[307],Em._e[91],Em._e[14]);
+})(Em._e[304],Em._e[91],Em._e[14]);
 (function (exports) {
   /**
   @module ember
@@ -49388,7 +49168,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function concat(params) {
     return params.join('');
   }
-})(Em._e[308]);
+})(Em._e[305]);
 (function (exports) {
   /*
     This private helper is used to join and compact a list of class names.
@@ -49413,7 +49193,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return result.join(' ');
   }
-})(Em._e[309]);
+})(Em._e[306]);
 (function (exports, _htmlbarsUtilSafeString) {
   'use strict';
 
@@ -49431,7 +49211,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return new _htmlbarsUtilSafeString.default(value);
   }
-})(Em._e[310],Em._e[228]);
+})(Em._e[307],Em._e[225]);
 (function (exports) {
    /**
    @module ember
@@ -49467,7 +49247,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
    function hashHelper(params, hash, options) {
       return hash;
    }
-})(Em._e[311]);
+})(Em._e[308]);
 (function (exports, _emberViewsComponent_lookup, _emberViewsSystemJquery, _emberMetalError, _emberRuntimeSystemLazy_load, _emberTemplateCompilerSystemCompile, _emberMetalEnvironment, _emberHtmlbarsTemplate_registry) {
   /*globals Handlebars */
 
@@ -49566,7 +49346,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   });
 
   exports.default = bootstrap;
-})(Em._e[312],Em._e[179],Em._e[133],Em._e[11],Em._e[92],Em._e[277],Em._e[54],Em._e[222]);
+})(Em._e[309],Em._e[179],Em._e[133],Em._e[11],Em._e[92],Em._e[274],Em._e[54],Em._e[219]);
 (function (exports, _emberMetalCore, _emberRuntimeSystemString, _htmlbarsUtil) {
   /**
   @module ember
@@ -49609,7 +49389,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   exports.SafeString = _htmlbarsUtil.SafeString;
   exports.htmlSafe = htmlSafe;
   exports.escapeExpression = _htmlbarsUtil.escapeExpression;
-})(Em._e[313],Em._e[2],Em._e[91],Em._e[231]);
+})(Em._e[310],Em._e[2],Em._e[91],Em._e[228]);
 (function (exports, _emberMetalCore, _emberHtmlbarsUtilsString) {
   'use strict';
 
@@ -49621,7 +49401,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   };
 
   exports.default = EmberHandlebars;
-})(Em._e[314],Em._e[2],Em._e[313]);
+})(Em._e[311],Em._e[2],Em._e[310]);
 (function (exports, _emberMetalCore, _emberTemplateCompiler, _emberHtmlbarsSystemMake_bound_helper, _emberHtmlbarsHelpers, _emberHtmlbarsHelpersIf_unless, _emberHtmlbarsHelpersWith, _emberHtmlbarsHelpersLoc, _emberHtmlbarsHelpersLog, _emberHtmlbarsHelpersEach, _emberHtmlbarsHelpersEachIn, _emberHtmlbarsHelpersNormalizeClass, _emberHtmlbarsHelpersConcat, _emberHtmlbarsHelpersJoinClasses, _emberHtmlbarsHelpersHtmlSafe, _emberHtmlbarsHelpersHash, _emberHtmlbarsSystemDomHelper, _emberHtmlbarsHelper, _emberHtmlbarsTemplate_registry, _emberHtmlbarsSystemBootstrap, _emberHtmlbarsCompat) {
   /**
     Ember templates are executed by [HTMLBars](https://github.com/tildeio/htmlbars),
@@ -49761,7 +49541,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     get: _emberHtmlbarsTemplate_registry.getTemplates,
     set: _emberHtmlbarsTemplate_registry.setTemplates
   });
-})(Em._e[315],Em._e[2],Em._e[296],Em._e[298],Em._e[220],Em._e[300],Em._e[301],Em._e[302],Em._e[303],Em._e[305],Em._e[306],Em._e[307],Em._e[308],Em._e[309],Em._e[310],Em._e[311],Em._e[237],Em._e[297],Em._e[222],Em._e[312],Em._e[314]);
+})(Em._e[312],Em._e[2],Em._e[293],Em._e[295],Em._e[217],Em._e[297],Em._e[298],Em._e[299],Em._e[300],Em._e[302],Em._e[303],Em._e[304],Em._e[305],Em._e[306],Em._e[307],Em._e[308],Em._e[234],Em._e[294],Em._e[219],Em._e[309],Em._e[311]);
 (function (exports, _htmlbarsRuntime) {
   /**
   @module ember
@@ -49796,7 +49576,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = keywords;
-})(Em._e[316],Em._e[149]);
+})(Em._e[313],Em._e[149]);
 (function (exports, _emberRuntimeSystemObject) {
   'use strict';
 
@@ -49804,7 +49584,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     isQueryParams: true,
     values: null
   });
-})(Em._e[317],Em._e[70]);
+})(Em._e[314],Em._e[70]);
 (function (exports, _emberMetalDebug, _emberRoutingSystemQuery_params) {
   /**
   @module ember
@@ -49839,7 +49619,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       values: hash
     });
   }
-})(Em._e[318],Em._e[1],Em._e[317]);
+})(Em._e[315],Em._e[1],Em._e[314]);
 (function (exports, _htmlbarsRuntimeHooks, _emberRoutingHtmlbarsKeywordsClosureAction) {
   /**
   @module ember
@@ -50112,7 +49892,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return _emberRoutingHtmlbarsKeywordsClosureAction.default(morph, env, scope, params, hash, template, inverse, visitor);
   };
-})(Em._e[319],Em._e[148],Em._e[256]);
+})(Em._e[316],Em._e[148],Em._e[253]);
 (function (exports, _emberMetalDebug, _emberMetalProperty_get, _emberMetalStreamsUtils, _emberRuntimeMixinsController) {
   'use strict';
 
@@ -50162,7 +49942,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return object;
     }
   }
-})(Em._e[320],Em._e[1],Em._e[15],Em._e[49],Em._e[99]);
+})(Em._e[317],Em._e[1],Em._e[15],Em._e[49],Em._e[99]);
 (function (exports, _emberMetalDebug, _emberMetalUtils, _emberMetalStreamsUtils, _emberMetalRun_loop, _emberViewsStreamsUtils, _emberViewsSystemUtils, _emberViewsSystemAction_manager) {
   'use strict';
 
@@ -50307,7 +50087,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return true;
   }
-})(Em._e[321],Em._e[1],Em._e[7],Em._e[49],Em._e[44],Em._e[320],Em._e[134],Em._e[175]);
+})(Em._e[318],Em._e[1],Em._e[7],Em._e[49],Em._e[44],Em._e[317],Em._e[134],Em._e[175]);
 (function (exports, _emberMetalAssign, _emberMetalDebug, _emberViewsSystemBuildComponentTemplate, _emberMetalProperty_get, _emberMetalProperty_set, _emberMetalSet_properties, _emberViewsViewsView, _emberViewsCompatAttrsProxy, _emberHtmlbarsHooksGetCellOrValue, _emberHtmlbarsSystemInstrumentationSupport, _emberHtmlbarsNodeManagersComponentNodeManager, _containerOwner, _emberHtmlbarsHooksGetValue) {
   'use strict';
 
@@ -50565,7 +50345,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return target;
   }
-})(Em._e[322],Em._e[3],Em._e[1],Em._e[152],Em._e[15],Em._e[22],Em._e[25],Em._e[173],Em._e[150],Em._e[258],Em._e[259],Em._e[261],Em._e[65],Em._e[151]);
+})(Em._e[319],Em._e[3],Em._e[1],Em._e[152],Em._e[15],Em._e[22],Em._e[25],Em._e[173],Em._e[150],Em._e[255],Em._e[256],Em._e[258],Em._e[65],Em._e[151]);
 (function (exports, _emberMetalDebug, _emberMetalProperty_get, _emberMetalEmpty_object, _emberMetalError, _emberMetalStreamsUtils, _emberRuntimeSystemString, _emberRoutingSystemGenerate_controller, _emberHtmlbarsNodeManagersViewNodeManager) {
   /**
   @module ember
@@ -50847,7 +50627,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     }
     return true;
   }
-})(Em._e[323],Em._e[1],Em._e[15],Em._e[9],Em._e[11],Em._e[49],Em._e[91],Em._e[193],Em._e[322]);
+})(Em._e[320],Em._e[1],Em._e[15],Em._e[9],Em._e[11],Em._e[49],Em._e[91],Em._e[193],Em._e[319]);
 (function (exports, _emberMetalCore, _emberHtmlbarsHelpers, _emberHtmlbarsKeywords, _emberRoutingHtmlbarsHelpersQueryParams, _emberRoutingHtmlbarsKeywordsAction, _emberRoutingHtmlbarsKeywordsElementAction, _emberRoutingHtmlbarsKeywordsRender) {
   /**
   @module ember
@@ -50863,7 +50643,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   _emberHtmlbarsKeywords.registerKeyword('render', _emberRoutingHtmlbarsKeywordsRender.default);
 
   exports.default = _emberMetalCore.default;
-})(Em._e[324],Em._e[2],Em._e[220],Em._e[316],Em._e[318],Em._e[319],Em._e[321],Em._e[323]);
+})(Em._e[321],Em._e[2],Em._e[217],Em._e[313],Em._e[315],Em._e[316],Em._e[318],Em._e[320]);
 (function (exports, _emberMetalCore, _emberRoutingViewsComponentsLinkTo, _emberRoutingViewsViewsOutlet) {
   /**
   @module ember
@@ -50876,7 +50656,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   _emberMetalCore.default.OutletView = _emberRoutingViewsViewsOutlet.OutletView;
 
   exports.default = _emberMetalCore.default;
-})(Em._e[325],Em._e[2],Em._e[263],Em._e[240]);
+})(Em._e[322],Em._e[2],Em._e[260],Em._e[237]);
 (function (exports, _emberMetal, _emberRuntime, _emberViews, _emberRouting, _emberApplication, _emberExtensionSupport, _emberHtmlbars, _emberRoutingHtmlbars, _emberRoutingViews, _require, _emberRuntimeSystemLazy_load) {
   // require the main entry points for each of these packages
   // this is so that the global exports occur properly
@@ -50897,7 +50677,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   /**
   @module ember
   */
-})(Em._e[326],Em._e[59],Em._e[132],Em._e[184],Em._e[219],Em._e[271],Em._e[273],Em._e[315],Em._e[324],Em._e[325],Em.__loader.require,Em._e[92]);
+})(Em._e[323],Em._e[59],Em._e[132],Em._e[184],Em._e[216],Em._e[268],Em._e[270],Em._e[312],Em._e[321],Em._e[322],Em.__loader.require,Em._e[92]);
 (function (exports, _emberMetalStreamsUtils) {
   /**
   @module ember
@@ -50911,7 +50691,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function concat(env, parts) {
     return _emberMetalStreamsUtils.concat(parts, '');
   }
-})(Em._e[327],Em._e[49]);
+})(Em._e[324],Em._e[49]);
 (function (exports, _emberMetalStreamsProxyStream, _emberMetalEmpty_object) {
   'use strict';
 
@@ -51131,7 +50911,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function createChildScope(parent) {
     return new Scope(parent);
   }
-})(Em._e[328],Em._e[244],Em._e[9]);
+})(Em._e[325],Em._e[241],Em._e[9]);
 (function (exports, _emberMetalStreamsProxyStream) {
   /**
   @module ember
@@ -51172,7 +50952,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function newStream(newValue, key) {
     return new _emberMetalStreamsProxyStream.default(newValue, key);
   }
-})(Em._e[329],Em._e[244]);
+})(Em._e[326],Em._e[241]);
 (function (exports, _emberMetal, _emberMetalStreamsProxyStream) {
   /**
   @module ember
@@ -51207,14 +50987,14 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function newStream(newValue, key) {
     return new _emberMetalStreamsProxyStream.default(newValue, key);
   }
-})(Em._e[330],Em._e[59],Em._e[244]);
+})(Em._e[327],Em._e[59],Em._e[241]);
 (function (exports) {
   "use strict";
 
   exports.default = bindScope;
 
   function bindScope(env, scope) {}
-})(Em._e[331]);
+})(Em._e[328]);
 (function (exports, _emberMetalStreamsStream, _emberMetalStreamsProxyStream) {
   /**
   @module ember
@@ -51237,7 +51017,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       scope.bindLocal(key, newValue);
     }
   }
-})(Em._e[332],Em._e[48],Em._e[244]);
+})(Em._e[329],Em._e[48],Em._e[241]);
 (function (exports) {
   'use strict';
 
@@ -51248,7 +51028,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     scope.bindBlock(name, block);
   }
-})(Em._e[333]);
+})(Em._e[330]);
 (function (exports, _emberMetalDebug, _emberMetalProperty_get) {
   /**
   @module ember
@@ -51281,7 +51061,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     scope.updateSelf(self);
   }
-})(Em._e[334],Em._e[1],Em._e[15]);
+})(Em._e[331],Em._e[1],Em._e[15]);
 (function (exports) {
   /**
   @module ember
@@ -51328,7 +51108,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       return attrs[key];
     }
   }
-})(Em._e[335]);
+})(Em._e[332]);
 (function (exports, _emberMetalStreamsUtils) {
   /**
   @module ember
@@ -51349,7 +51129,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     // through the templating system.
     return parent[key];
   }
-})(Em._e[336],Em._e[49]);
+})(Em._e[333],Em._e[49]);
 (function (exports) {
   "use strict";
 
@@ -51358,7 +51138,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function getBlock(scope, key) {
     return scope.getBlock(key);
   }
-})(Em._e[337]);
+})(Em._e[334]);
 (function (exports) {
   /**
   @module ember
@@ -51374,7 +51154,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       renderNode.cleanup();
     }
   }
-})(Em._e[338]);
+})(Em._e[335]);
 (function (exports) {
   /**
   @module ember
@@ -51397,7 +51177,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       }
     }
   }
-})(Em._e[339]);
+})(Em._e[336]);
 (function (exports) {
   "use strict";
 
@@ -51406,7 +51186,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function didRenderNode(morph, env) {
     env.renderedNodes.add(morph);
   }
-})(Em._e[340]);
+})(Em._e[337]);
 (function (exports) {
   "use strict";
 
@@ -51444,7 +51224,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     // `didCleanupTree`.
     view.ownerView._destroyingSubtreeForView = view;
   }
-})(Em._e[341]);
+})(Em._e[338]);
 (function (exports) {
   "use strict";
 
@@ -51455,7 +51235,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     // state tracking which view those render nodes belonged to.
     env.view.ownerView._destroyingSubtreeForView = null;
   }
-})(Em._e[342]);
+})(Em._e[339]);
 (function (exports, _emberMetalFeatures, _emberHtmlbarsSystemLookupHelper, _emberHtmlbarsKeywordsClosureComponent, _emberMetalStreamsUtils) {
   /**
   @module ember
@@ -51510,7 +51290,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
         }
     }
   }
-})(Em._e[343],Em._e[4],Em._e[178],Em._e[253],Em._e[49]);
+})(Em._e[340],Em._e[4],Em._e[178],Em._e[250],Em._e[49]);
 (function (exports, _emberHtmlbarsUtilsIsComponent) {
   /**
   @module ember
@@ -51528,7 +51308,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return null;
   }
-})(Em._e[344],Em._e[343]);
+})(Em._e[341],Em._e[340]);
 (function (exports, _emberMetalFeatures, _emberMetalDebug, _emberHtmlbarsNodeManagersComponentNodeManager, _emberViewsSystemBuildComponentTemplate, _emberHtmlbarsUtilsLookupComponent, _emberMetalAssign, _emberMetalEmpty_object, _emberMetalCache, _emberHtmlbarsSystemLookupHelper, _emberHtmlbarsUtilsExtractPositionalParams, _emberHtmlbarsKeywordsClosureComponent) {
   'use strict';
 
@@ -51569,9 +51349,15 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     // Determine if this is an initial render or a re-render.
     if (state.manager) {
-      var templateMeta = state.manager.block.template.meta;
+      var sm = state.manager;
+      var templateMeta = null;
+      if (sm.block) {
+        templateMeta = sm.block.template.meta;
+      } else if (sm.scope && sm.scope._view) {
+        templateMeta = sm.scope._view.template.meta;
+      }
       env.meta.moduleName = templateMeta && templateMeta.moduleName || env.meta && env.meta.moduleName;
-      _emberHtmlbarsUtilsExtractPositionalParams.default(renderNode, state.manager.component.constructor, params, attrs, false);
+      _emberHtmlbarsUtilsExtractPositionalParams.default(renderNode, sm.component.constructor, params, attrs, false);
       state.manager.rerender(env, attrs, visitor);
       return;
     }
@@ -51685,7 +51471,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       manager.render(env, visitor);
     }
   }
-})(Em._e[345],Em._e[4],Em._e[1],Em._e[261],Em._e[152],Em._e[252],Em._e[3],Em._e[9],Em._e[12],Em._e[178],Em._e[251],Em._e[253]);
+})(Em._e[342],Em._e[4],Em._e[1],Em._e[258],Em._e[152],Em._e[249],Em._e[3],Em._e[9],Em._e[12],Em._e[178],Em._e[248],Em._e[250]);
 (function (exports, _emberHtmlbarsSystemLookupHelper) {
   'use strict';
 
@@ -51694,7 +51480,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   function lookupHelperHook(env, scope, helperName) {
     return _emberHtmlbarsSystemLookupHelper.default(helperName, scope.getSelf(), env);
   }
-})(Em._e[346],Em._e[178]);
+})(Em._e[343],Em._e[178]);
 (function (exports, _emberHtmlbarsSystemLookupHelper) {
   'use strict';
 
@@ -51725,7 +51511,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return false;
   }
-})(Em._e[347],Em._e[178]);
+})(Em._e[344],Em._e[178]);
 (function (exports, _emberHtmlbarsSystemInvokeHelper, _emberHtmlbarsUtilsSubscribe) {
   'use strict';
 
@@ -51761,7 +51547,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     // Built-in helpers are not linkable. They must run on every rerender.
     return { value: helperStream.value() };
   }
-})(Em._e[348],Em._e[249],Em._e[250]);
+})(Em._e[345],Em._e[246],Em._e[247]);
 (function (exports, _emberHtmlbarsSystemLookupHelper, _htmlbarsRuntimeHooks, _emberHtmlbarsSystemInvokeHelper) {
   /**
   @module ember
@@ -51788,7 +51574,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     env.hooks.getValue(result);
   }
-})(Em._e[349],Em._e[178],Em._e[148],Em._e[249]);
+})(Em._e[346],Em._e[178],Em._e[148],Em._e[246]);
 (function (exports, _emberMetalDebug) {
   /*jshint debug:true*/
 
@@ -51860,7 +51646,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return true;
   }
-})(Em._e[350],Em._e[1]);
+})(Em._e[347],Em._e[1]);
 (function (exports, _emberMetalDebug, _htmlbarsRuntime) {
   /**
   @module ember
@@ -51890,7 +51676,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       _htmlbarsRuntime.internal.continueBlock(morph, env, scope, 'with', params, hash, template, inverse, visitor);
     }
   };
-})(Em._e[351],Em._e[1],Em._e[149]);
+})(Em._e[348],Em._e[1],Em._e[149]);
 (function (exports, _emberMetalDebug, _emberMetalProperty_get, _emberHtmlbarsNodeManagersViewNodeManager, _emberHtmlbarsTemplatesTopLevelView, _emberMetalFeatures) {
   /**
   @module ember
@@ -51899,7 +51685,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
   'use strict';
 
-  _emberHtmlbarsTemplatesTopLevelView.default.meta.revision = 'Ember@2.6.0';
+  _emberHtmlbarsTemplatesTopLevelView.default.meta.revision = 'Ember@2.6.1';
 
   /**
     The `{{outlet}}` helper lets you specify where a child route will render in
@@ -52067,7 +51853,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     }
     return true;
   }
-})(Em._e[352],Em._e[1],Em._e[15],Em._e[322],Em._e[239],Em._e[4]);
+})(Em._e[349],Em._e[1],Em._e[15],Em._e[319],Em._e[236],Em._e[4]);
 (function (exports, _emberMetalDebug, _emberMetalStreamsStream, _emberMetalStreamsUtils) {
   /**
   @module ember
@@ -52138,7 +51924,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     env.hooks.range(morph, env, scope, null, stream, visitor);
     return true;
   }
-})(Em._e[353],Em._e[1],Em._e[48],Em._e[49]);
+})(Em._e[350],Em._e[1],Em._e[48],Em._e[49]);
 (function (exports, _emberViewsStreamsUtils, _emberViewsViewsView, _emberHtmlbarsNodeManagersViewNodeManager) {
   /**
   @module ember
@@ -52427,7 +52213,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return newHash;
   }
-})(Em._e[354],Em._e[320],Em._e[173],Em._e[322]);
+})(Em._e[351],Em._e[317],Em._e[173],Em._e[319]);
 (function (exports, _htmlbarsRuntimeHooks, _emberHtmlbarsKeywordsClosureComponent, _emberMetalEmpty_object, _emberMetalAssign) {
   /**
     @module ember
@@ -52517,7 +52303,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     _htmlbarsRuntimeHooks.keyword('@element_component', morph, env, scope, params, newHash, template, inverse, visitor);
     return true;
   };
-})(Em._e[355],Em._e[148],Em._e[253],Em._e[9],Em._e[3]);
+})(Em._e[352],Em._e[148],Em._e[250],Em._e[9],Em._e[3]);
 (function (exports, _emberMetalAssign, _emberHtmlbarsKeywordsClosureComponent, _emberHtmlbarsUtilsLookupComponent, _emberHtmlbarsUtilsExtractPositionalParams) {
   'use strict';
 
@@ -52598,7 +52384,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     var templates = { default: template, inverse: inverse };
     env.hooks.component(morph, env, scope, componentPath, params, hash, templates, visitor);
   }
-})(Em._e[356],Em._e[3],Em._e[253],Em._e[252],Em._e[251]);
+})(Em._e[353],Em._e[3],Em._e[250],Em._e[249],Em._e[248]);
 (function (exports, _emberMetalDebug, _emberMetalError) {
   'use strict';
 
@@ -52634,7 +52420,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return env.owner.lookup('template:' + underscored) || env.owner.lookup('template:' + name);
   }
-})(Em._e[357],Em._e[1],Em._e[11]);
+})(Em._e[354],Em._e[1],Em._e[11]);
 (function (exports, _emberViewsSystemLookup_partial, _htmlbarsRuntime) {
   /**
   @module ember
@@ -52704,7 +52490,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       });
     }
   };
-})(Em._e[358],Em._e[357],Em._e[149]);
+})(Em._e[355],Em._e[354],Em._e[149]);
 (function (exports, _emberMetalDebug, _emberMetalAssign) {
   /**
   @module ember
@@ -52882,7 +52668,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   var componentNameMap = {
     'checkbox': '-checkbox'
   };
-})(Em._e[359],Em._e[1],Em._e[3]);
+})(Em._e[356],Em._e[1],Em._e[3]);
 (function (exports) {
   /**
   @module ember
@@ -53083,7 +52869,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
     env.hooks.component(morph, env, scope, '-text-area', originalParams, hash, { default: template, inverse: inverse }, visitor);
     return true;
   }
-})(Em._e[360]);
+})(Em._e[357]);
 (function (exports) {
   'use strict';
 
@@ -53099,7 +52885,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return true;
   }
-})(Em._e[361]);
+})(Em._e[358]);
 (function (exports, _emberHtmlbarsKeywordsMut) {
   /**
   @module ember
@@ -53122,7 +52908,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     return true;
   }
-})(Em._e[362],Em._e[257]);
+})(Em._e[359],Em._e[254]);
 (function (exports, _emberMetalDebug, _emberMetalStreamsStream, _emberMetalStreamsUtils, _emberHtmlbarsUtilsSubscribe, _emberMetalProperty_get, _emberMetalProperty_set, _emberMetalObserver) {
   /**
   @module ember
@@ -53285,7 +53071,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   }
 
   exports.default = getKeyword;
-})(Em._e[363],Em._e[1],Em._e[48],Em._e[49],Em._e[250],Em._e[15],Em._e[22],Em._e[37]);
+})(Em._e[360],Em._e[1],Em._e[48],Em._e[49],Em._e[247],Em._e[15],Em._e[22],Em._e[37]);
 (function (exports, _emberMetal, _emberMetalEnvironment, _htmlbarsRuntime, _emberMetalAssign, _emberHtmlbarsHooksSubexpr, _emberHtmlbarsHooksConcat, _emberHtmlbarsHooksLinkRenderNode, _emberHtmlbarsHooksCreateFreshScope, _emberHtmlbarsHooksBindShadowScope, _emberHtmlbarsHooksBindSelf, _emberHtmlbarsHooksBindScope, _emberHtmlbarsHooksBindLocal, _emberHtmlbarsHooksBindBlock, _emberHtmlbarsHooksUpdateSelf, _emberHtmlbarsHooksGetRoot, _emberHtmlbarsHooksGetChild, _emberHtmlbarsHooksGetBlock, _emberHtmlbarsHooksGetValue, _emberHtmlbarsHooksGetCellOrValue, _emberHtmlbarsHooksCleanupRenderNode, _emberHtmlbarsHooksDestroyRenderNode, _emberHtmlbarsHooksDidRenderNode, _emberHtmlbarsHooksWillCleanupTree, _emberHtmlbarsHooksDidCleanupTree, _emberHtmlbarsHooksClassify, _emberHtmlbarsHooksComponent, _emberHtmlbarsHooksLookupHelper, _emberHtmlbarsHooksHasHelper, _emberHtmlbarsHooksInvokeHelper, _emberHtmlbarsHooksElement, _emberHtmlbarsHelpers, _emberHtmlbarsKeywords, _emberHtmlbarsSystemDomHelper, _emberHtmlbarsKeywordsDebugger, _emberHtmlbarsKeywordsWith, _emberHtmlbarsKeywordsOutlet, _emberHtmlbarsKeywordsUnbound, _emberHtmlbarsKeywordsView, _emberHtmlbarsKeywordsComponent, _emberHtmlbarsKeywordsElementComponent, _emberHtmlbarsKeywordsPartial, _emberHtmlbarsKeywordsInput, _emberHtmlbarsKeywordsTextarea, _emberHtmlbarsKeywordsYield, _emberHtmlbarsKeywordsMut, _emberHtmlbarsKeywordsReadonly, _emberHtmlbarsKeywordsGet) {
   'use strict';
 
@@ -53350,7 +53136,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
   var domHelper = _emberMetalEnvironment.default.hasDOM ? new _emberHtmlbarsSystemDomHelper.default() : null;
 
   exports.domHelper = domHelper;
-})(Em._e[364],Em._e[59],Em._e[54],Em._e[149],Em._e[3],Em._e[255],Em._e[327],Em._e[254],Em._e[328],Em._e[329],Em._e[330],Em._e[331],Em._e[332],Em._e[333],Em._e[334],Em._e[335],Em._e[336],Em._e[337],Em._e[151],Em._e[258],Em._e[338],Em._e[339],Em._e[340],Em._e[341],Em._e[342],Em._e[344],Em._e[345],Em._e[346],Em._e[347],Em._e[348],Em._e[349],Em._e[220],Em._e[316],Em._e[237],Em._e[350],Em._e[351],Em._e[352],Em._e[353],Em._e[354],Em._e[355],Em._e[356],Em._e[358],Em._e[359],Em._e[360],Em._e[361],Em._e[257],Em._e[362],Em._e[363]);
+})(Em._e[361],Em._e[59],Em._e[54],Em._e[149],Em._e[3],Em._e[252],Em._e[324],Em._e[251],Em._e[325],Em._e[326],Em._e[327],Em._e[328],Em._e[329],Em._e[330],Em._e[331],Em._e[332],Em._e[333],Em._e[334],Em._e[151],Em._e[255],Em._e[335],Em._e[336],Em._e[337],Em._e[338],Em._e[339],Em._e[341],Em._e[342],Em._e[343],Em._e[344],Em._e[345],Em._e[346],Em._e[217],Em._e[313],Em._e[234],Em._e[347],Em._e[348],Em._e[349],Em._e[350],Em._e[351],Em._e[352],Em._e[353],Em._e[355],Em._e[356],Em._e[357],Em._e[358],Em._e[254],Em._e[359],Em._e[360]);
 (function (exports, _emberHtmlbarsEnv, _emberMetalViews, _containerOwner) {
   'use strict';
 
@@ -53435,7 +53221,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       meta: meta
     });
   };
-})(Em._e[365],Em._e[364],Em._e[154],Em._e[65]);
+})(Em._e[362],Em._e[361],Em._e[154],Em._e[65]);
 (function (exports, _emberHtmlbarsNodeManagersViewNodeManager, _emberHtmlbarsSystemRenderEnv) {
   'use strict';
 
@@ -53454,7 +53240,7 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
 
     nodeManager.render(env, {});
   }
-})(Em._e[366],Em._e[322],Em._e[365]);
+})(Em._e[363],Em._e[319],Em._e[362]);
 (function (exports, _emberMetalDebug, _emberMetalProperty_get, _emberMetalProperty_set, _emberMetalObserver, _emberMetalStreamsStream, _emberMetalStreamsUtils) {
   'use strict';
 
@@ -53534,4 +53320,4 @@ Em.__loader.define("rsvp/platform", ["exports"], function (exports) {
       this._clearObservedObject();
     }
   });
-})(Em._e[367],Em._e[1],Em._e[15],Em._e[22],Em._e[37],Em._e[48],Em._e[49]);
+})(Em._e[364],Em._e[1],Em._e[15],Em._e[22],Em._e[37],Em._e[48],Em._e[49]);
