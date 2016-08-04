@@ -2525,8 +2525,8 @@ enifed('ember-metal/chains', ['exports', 'ember-metal/property_get', 'ember-meta
       // Otherwise attempt to get the cached value of the computed property
     } else {
         var cache = meta.readableCache();
-        if (cache && cache.has(key)) {
-          return cache.get(key);
+        if (cache && key in cache) {
+          return cache[key];
         }
       }
   }
@@ -2997,8 +2997,8 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
     }
 
     var cache = meta.readableCache();
-    if (cache && cache.get(keyName) !== undefined) {
-      cache.set(keyName, undefined);
+    if (cache && cache[keyName] !== undefined) {
+      cache[keyName] = undefined;
       _emberMetalDependent_keys.removeDependentKeys(this, obj, keyName, meta);
     }
   };
@@ -3010,8 +3010,8 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
 
     var meta = _emberMetalMeta.meta(obj);
     var cache = meta.writableCache();
-    var result = cache.get(keyName);
 
+    var result = cache[keyName];
     if (result === UNDEFINED) {
       return undefined;
     } else if (result !== undefined) {
@@ -3020,9 +3020,9 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
 
     var ret = this._getter.call(obj, keyName);
     if (ret === undefined) {
-      cache.set(keyName, UNDEFINED);
+      cache[keyName] = UNDEFINED;
     } else {
-      cache.set(keyName, ret);
+      cache[keyName] = ret;
     }
 
     var chainWatchers = meta.readableChainWatchers();
@@ -3081,11 +3081,10 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
     // either there is a writable cache or we need one to update
     var cache = meta.writableCache();
     var hadCachedValue = false;
-    var rawCachedValue = cache.get(keyName);
     var cachedValue = undefined;
-    if (rawCachedValue !== undefined) {
-      if (rawCachedValue !== UNDEFINED) {
-        cachedValue = rawCachedValue;
+    if (cache[keyName] !== undefined) {
+      if (cache[keyName] !== UNDEFINED) {
+        cachedValue = cache[keyName];
       }
       hadCachedValue = true;
     }
@@ -3103,7 +3102,7 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
     }
 
     if (hadCachedValue) {
-      cache.set(keyName, undefined);
+      cache[keyName] = undefined;
     }
 
     if (!hadCachedValue) {
@@ -3111,9 +3110,9 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
     }
 
     if (ret === undefined) {
-      cache.set(keyName, UNDEFINED);
+      cache[keyName] = UNDEFINED;
     } else {
-      cache.set(keyName, ret);
+      cache[keyName] = ret;
     }
 
     if (watched) {
@@ -3130,9 +3129,9 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
     }
     var meta = _emberMetalMeta.meta(obj);
     var cache = meta.readableCache();
-    if (cache && cache.get(keyName) !== undefined) {
+    if (cache && cache[keyName] !== undefined) {
       _emberMetalDependent_keys.removeDependentKeys(this, obj, keyName, meta);
-      cache.set(keyName, undefined);
+      cache[keyName] = undefined;
     }
   };
 
@@ -3256,7 +3255,7 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
   function cacheFor(obj, key) {
     var meta = _emberMetalMeta.peekMeta(obj);
     var cache = meta && meta.source === obj && meta.readableCache();
-    var ret = cache && cache.get(key);
+    var ret = cache && cache[key];
 
     if (ret === UNDEFINED) {
       return undefined;
@@ -3266,14 +3265,14 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
 
   cacheFor.set = function (cache, key, value) {
     if (value === undefined) {
-      cache.set(key, UNDEFINED);
+      cache[key] = UNDEFINED;
     } else {
-      cache.set(key, value);
+      cache[key] = value;
     }
   };
 
   cacheFor.get = function (cache, key) {
-    var ret = cache.get(key);
+    var ret = cache[key];
     if (ret === UNDEFINED) {
       return undefined;
     }
@@ -3281,7 +3280,7 @@ enifed('ember-metal/computed', ['exports', 'ember-metal/debug', 'ember-metal/pro
   };
 
   cacheFor.remove = function (cache, key) {
-    cache.set(key, undefined);
+    cache[key] = undefined;
   };
 
   exports.ComputedProperty = ComputedProperty;
@@ -6378,7 +6377,7 @@ enifed('ember-metal/merge', ['exports'], function (exports) {
     return original;
   }
 });
-enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-metal/utils/lodash-stack'], function (exports, _emberMetalMeta_listeners, _emberMetalUtilsLodashStack) {
+enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-metal/empty_object'], function (exports, _emberMetalMeta_listeners, _emberMetalEmpty_object) {
   'no use strict';
   // Remove "use strict"; from transpiled module until
   // https://bugs.webkit.org/show_bug.cgi?id=138038 is fixed
@@ -6479,7 +6478,7 @@ enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-meta
   Meta.prototype._getOrCreateOwnMap = function (key) {
     var ret = this[key];
     if (!ret) {
-      ret = this[key] = new _emberMetalUtilsLodashStack.default();
+      ret = this[key] = new _emberMetalEmpty_object.default();
     }
     return ret;
   };
@@ -6492,7 +6491,7 @@ enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-meta
 
     Meta.prototype['write' + capitalized] = function (subkey, value) {
       var map = this._getOrCreateOwnMap(key);
-      map.set(subkey, value);
+      map[subkey] = value;
     };
 
     Meta.prototype['peek' + capitalized] = function (subkey) {
@@ -6501,19 +6500,16 @@ enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-meta
 
     Meta.prototype['forEach' + capitalized] = function (fn) {
       var pointer = this;
-      var seen = new _emberMetalUtilsLodashStack.default();
-
-      var perSubKeyCallback = function (subkey, value) {
-        if (!seen.has(subkey)) {
-          seen.set(subkey, true);
-          fn(subkey, value);
-        }
-      };
-
+      var seen = new _emberMetalEmpty_object.default();
       while (pointer !== undefined) {
         var map = pointer[key];
         if (map) {
-          map.forEach(perSubKeyCallback);
+          for (var _key in map) {
+            if (!seen[_key]) {
+              seen[_key] = true;
+              fn(_key, map[_key]);
+            }
+          }
         }
         pointer = pointer.parent;
       }
@@ -6524,7 +6520,7 @@ enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-meta
     };
 
     Meta.prototype['deleteFrom' + capitalized] = function (subkey) {
-      this._getOrCreateOwnMap(key).delete(subkey);
+      delete this._getOrCreateOwnMap(key)[subkey];
     };
 
     Meta.prototype['hasIn' + capitalized] = function (subkey) {
@@ -6547,7 +6543,7 @@ enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-meta
     while (pointer !== undefined) {
       var map = pointer[key];
       if (map) {
-        var value = map.get(subkey);
+        var value = map[subkey];
         if (value !== undefined) {
           return value;
         }
@@ -6563,25 +6559,23 @@ enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-meta
     var capitalized = capitalize(name);
 
     Meta.prototype['write' + capitalized] = function (subkey, itemkey, value) {
-      var keyMap = this._getOrCreateOwnMap(key);
-      var subkeyMap = keyMap.get(subkey);
-      if (!subkeyMap) {
-        subkeyMap = new _emberMetalUtilsLodashStack.default();
-        keyMap.set(subkey, subkeyMap);
+      var outerMap = this._getOrCreateOwnMap(key);
+      var innerMap = outerMap[subkey];
+      if (!innerMap) {
+        innerMap = outerMap[subkey] = new _emberMetalEmpty_object.default();
       }
-      subkeyMap.set(itemkey, value);
+      innerMap[itemkey] = value;
     };
 
     Meta.prototype['peek' + capitalized] = function (subkey, itemkey) {
       var pointer = this;
       while (pointer !== undefined) {
-        var keyMap = pointer[key];
-        if (keyMap) {
-          var subkeyMap = keyMap.get(subkey);
-          if (subkeyMap) {
-            var itemkeyValue = subkeyMap.get(itemkey);
-            if (itemkeyValue !== undefined) {
-              return itemkeyValue;
+        var map = pointer[key];
+        if (map) {
+          var value = map[subkey];
+          if (value) {
+            if (value[itemkey] !== undefined) {
+              return value[itemkey];
             }
           }
         }
@@ -6592,7 +6586,7 @@ enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-meta
     Meta.prototype['has' + capitalized] = function (subkey) {
       var pointer = this;
       while (pointer !== undefined) {
-        if (pointer[key] && pointer[key].has(subkey)) {
+        if (pointer[key] && pointer[key][subkey]) {
           return true;
         }
         pointer = pointer.parent;
@@ -6607,22 +6601,19 @@ enifed('ember-metal/meta', ['exports', 'ember-metal/meta_listeners', 'ember-meta
 
   Meta.prototype._forEachIn = function (key, subkey, fn) {
     var pointer = this;
-    var seen = new _emberMetalUtilsLodashStack.default();
+    var seen = new _emberMetalEmpty_object.default();
     var calls = [];
-
-    var perSubkeyItemCallback = function (itemKey, itemValue) {
-      if (!seen.has(itemKey)) {
-        seen.set(itemKey, true);
-        calls.push([itemKey, itemValue]);
-      }
-    };
-
     while (pointer !== undefined) {
-      var keyMap = pointer[key];
-      if (keyMap) {
-        var subkeyMap = keyMap.get(subkey);
-        if (subkeyMap) {
-          subkeyMap.forEach(perSubkeyItemCallback);
+      var map = pointer[key];
+      if (map) {
+        var innerMap = map[subkey];
+        if (innerMap) {
+          for (var innerKey in innerMap) {
+            if (!seen[innerKey]) {
+              seen[innerKey] = true;
+              calls.push([innerKey, innerMap[innerKey]]);
+            }
+          }
         }
       }
       pointer = pointer.parent;
@@ -11249,272 +11240,6 @@ enifed('ember-metal/utils', ['exports'], function (exports) {
   exports.makeArray = makeArray;
   exports.canInvoke = canInvoke;
 });
-enifed('ember-metal/utils/lodash-stack', ['exports', 'ember-metal/empty_object'], function (exports, _emberMetalEmpty_object) {
-  // jshint eqeqeq:false
-  // jshint laxbreak:true
-
-  'use strict';
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  /*
-   From Lodash's private Stack/Hash/MapCache/ListCache here:
-   https://github.com/lodash/lodash/blob/4.13.1/dist/lodash.js#L1790-L1900
-   The long term plan is to replace this and simply utilize lodash itself (via
-   rollup or other) in the build itself.
-   ***********************************************************************
-   * @license
-   * lodash <https://lodash.com/>
-   * Copyright jQuery Foundation and other contributors <https://jquery.org/>
-   * Released under MIT license <https://lodash.com/license>
-   * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-   * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-   ***********************************************************************
-  */
-
-  var LARGE_ARRAY_SIZE = 200;
-  var HASH_UNDEFINED = '__lodash_hash_undefined__';
-
-  function isKeyable(value) {
-    var type = typeof value;
-    return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
-  }
-
-  function getMapData(map, key) {
-    var data = map.__data__;
-    return isKeyable(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
-  }
-
-  function assocIndexOf(array, key) {
-    var length = array.length;
-    while (length--) {
-      if (array[length][0] === key) {
-        return length;
-      }
-    }
-
-    return -1;
-  }
-
-  var Hash = (function () {
-    function Hash(entries) {
-      _classCallCheck(this, Hash);
-
-      var index = -1;
-      var length = entries ? entries.length : 0;
-
-      this.clear();
-
-      while (++index < length) {
-        var entry = entries[index];
-        this.set(entry[0], entry[1]);
-      }
-    }
-
-    Hash.prototype.clear = function clear() {
-      this.__data__ = new _emberMetalEmpty_object.default();
-    };
-
-    Hash.prototype.delete = function _delete(key) {
-      return this.has(key) && delete this.__data__[key];
-    };
-
-    Hash.prototype.get = function get(key) {
-      var data = this.__data__;
-      var result = data[key];
-
-      return result === HASH_UNDEFINED ? undefined : result;
-    };
-
-    Hash.prototype.has = function has(key) {
-      var data = this.__data__;
-      return data[key] !== undefined;
-    };
-
-    Hash.prototype.set = function set(key, value) {
-      var data = this.__data__;
-      data[key] = value === undefined ? HASH_UNDEFINED : value;
-    };
-
-    Hash.prototype.forEach = function forEach(callback) {
-      var data = this.__data__;
-      for (var key in data) {
-        callback(key, data[key]);
-      }
-    };
-
-    return Hash;
-  })();
-
-  exports.Hash = Hash;
-
-  var MapCache = (function () {
-    function MapCache(entries) {
-      _classCallCheck(this, MapCache);
-
-      var index = -1;
-      var length = entries ? entries.length : 0;
-
-      this.clear();
-
-      while (++index < length) {
-        var entry = entries[index];
-        this.set(entry[0], entry[1]);
-      }
-    }
-
-    MapCache.prototype.clear = function clear() {
-      this.__data__ = {
-        'hash': new Hash(),
-        // TODO: use native Map if present
-        'map': new ListCache(),
-        'string': new Hash()
-      };
-    };
-
-    MapCache.prototype.delete = function _delete(key) {
-      return getMapData(this, key)['delete'](key);
-    };
-
-    MapCache.prototype.get = function get(key) {
-      return getMapData(this, key).get(key);
-    };
-
-    MapCache.prototype.has = function has(key) {
-      return getMapData(this, key).has(key);
-    };
-
-    MapCache.prototype.set = function set(key, value) {
-      getMapData(this, key).set(key, value);
-    };
-
-    MapCache.prototype.forEach = function forEach(callback) {
-      this.__data__.hash.forEach(callback);
-      this.__data__.map.forEach(callback);
-      this.__data__.string.forEach(callback);
-    };
-
-    return MapCache;
-  })();
-
-  exports.MapCache = MapCache;
-
-  var ListCache = (function () {
-    function ListCache(entries) {
-      _classCallCheck(this, ListCache);
-
-      var index = -1;
-      var length = entries ? entries.length : 0;
-
-      this.clear();
-
-      while (++index < length) {
-        var entry = entries[index];
-        this.set(entry[0], entry[1]);
-      }
-    }
-
-    ListCache.prototype.clear = function clear() {
-      this.__data__ = [];
-    };
-
-    ListCache.prototype.delete = function _delete(key) {
-      var data = this.__data__;
-      var index = assocIndexOf(data, key);
-
-      if (index < 0) {
-        return false;
-      }
-      var lastIndex = data.length - 1;
-      if (index == lastIndex) {
-        data.pop();
-      } else {
-        data.splice(index, 1);
-      }
-
-      return true;
-    };
-
-    ListCache.prototype.get = function get(key) {
-      var data = this.__data__;
-      var index = assocIndexOf(data, key);
-
-      return index < 0 ? undefined : data[index][1];
-    };
-
-    ListCache.prototype.has = function has(key) {
-      return assocIndexOf(this.__data__, key) > -1;
-    };
-
-    ListCache.prototype.set = function set(key, value) {
-      var data = this.__data__;
-      var index = assocIndexOf(data, key);
-
-      if (index < 0) {
-        data.push([key, value]);
-      } else {
-        data[index][1] = value;
-      }
-    };
-
-    ListCache.prototype.forEach = function forEach(callback) {
-      var index = -1;
-
-      while (++index < this.__data__.length) {
-        callback.apply(null, this.__data__[index]);
-      }
-    };
-
-    return ListCache;
-  })();
-
-  exports.ListCache = ListCache;
-
-  var Stack = (function () {
-    function Stack() {
-      _classCallCheck(this, Stack);
-
-      this.__data__ = new ListCache();
-    }
-
-    Stack.prototype.clear = function clear() {
-      this.__data__ = new ListCache();
-    };
-
-    Stack.prototype.delete = function _delete(key) {
-      return this.__data__.delete(key);
-    };
-
-    Stack.prototype.get = function get(key) {
-      return this.__data__.get(key);
-    };
-
-    Stack.prototype.has = function has(key) {
-      return this.__data__.has(key);
-    };
-
-    Stack.prototype.set = function set(key, value) {
-      var cache = this.__data__;
-      if (cache instanceof ListCache && cache.__data__.length == LARGE_ARRAY_SIZE) {
-        cache = this.__data__ = new MapCache(cache.__data__);
-      }
-      cache.set(key, value);
-    };
-
-    /*
-     This is not included in the lodash Stack interface
-     but is required to support all the operations of Meta.
-     */
-
-    Stack.prototype.forEach = function forEach(callback) {
-      this.__data__.forEach(callback);
-    };
-
-    return Stack;
-  })();
-
-  exports.default = Stack;
-});
 enifed('ember-metal/watch_key', ['exports', 'ember-metal/features', 'ember-metal/meta', 'ember-metal/properties', 'ember-metal/utils'], function (exports, _emberMetalFeatures, _emberMetalMeta, _emberMetalProperties, _emberMetalUtils) {
   'use strict';
 
@@ -11827,12 +11552,11 @@ enifed('ember-metal/weak_map', ['exports', 'ember-metal/debug', 'ember-metal/uti
     if (meta) {
       var map = meta.readableWeak();
       if (map) {
-        var value = map.get(this._id);
-        if (value === UNDEFINED) {
+        if (map[this._id] === UNDEFINED) {
           return undefined;
         }
 
-        return value;
+        return map[this._id];
       }
     }
   };
@@ -11850,7 +11574,7 @@ enifed('ember-metal/weak_map', ['exports', 'ember-metal/debug', 'ember-metal/uti
       value = UNDEFINED;
     }
 
-    _emberMetalMeta.meta(obj).writableWeak().set(this._id, value);
+    _emberMetalMeta.meta(obj).writableWeak()[this._id] = value;
 
     return this;
   };
@@ -11865,7 +11589,7 @@ enifed('ember-metal/weak_map', ['exports', 'ember-metal/debug', 'ember-metal/uti
     if (meta) {
       var map = meta.readableWeak();
       if (map) {
-        return map.get(this._id) !== undefined;
+        return map[this._id] !== undefined;
       }
     }
 
@@ -11879,7 +11603,7 @@ enifed('ember-metal/weak_map', ['exports', 'ember-metal/debug', 'ember-metal/uti
    */
   WeakMap.prototype.delete = function (obj) {
     if (this.has(obj)) {
-      _emberMetalMeta.meta(obj).writableWeak().delete(this._id);
+      delete _emberMetalMeta.meta(obj).writableWeak()[this._id];
       return true;
     } else {
       return false;
